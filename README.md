@@ -15,7 +15,6 @@ Custom Discord bot for Modding Haven.
 
 ## To Do:
  - Change the burrito commands.
- - MH Orange embed bar.
 
 ## Credits:
 WillyJL#3633 for his amazing coding skills.
