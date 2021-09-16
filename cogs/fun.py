@@ -56,7 +56,7 @@ class Fun(commands.Cog,
                       description="Treat someone with a delicious SewerChocolate™️ (cosmetic, no rewards)",
                       usage="{prfx}choco bar [ user ]",
                       help="user: the user to give a choco bar to (ping, name, id) (optional)",
-                      aliases=["chocolate bar", "sewerchocolate", "choco"])
+                      aliases=["chocolate bar", "sewerchocolate", "choco", "sewerchoco"])
     async def burrito(self, ctx, target: Union[discord.Member, discord.User, int, str] = None):
         # Convert target input to discord.Member
         if not target:
