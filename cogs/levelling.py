@@ -63,9 +63,9 @@ class Levelling(commands.Cog,
         if target.id == globals.ADMIN_ID:
             img = Image.open("assets/backgrounds/admin.png"  )
         elif utils.is_staff(target):
-            img = Image.open("assets/backgrounds/staff.png"  )
+            img = Image.open("assets/backgrounds/staff_bg_MH.png"  )
         else:
-            img = Image.open("assets/backgrounds/default.png")
+            img = Image.open("assets/backgrounds/default_bg_MH.png")
         draw = ImageDraw.Draw(img)
 
         # Draw user avatar
@@ -82,20 +82,24 @@ class Levelling(commands.Cog,
         if target.id == globals.ADMIN_ID:
             img.paste(globals.overlays_admin,   (0, 0), globals.overlays_admin  )
         elif utils.is_staff(target):
-            img.paste(globals.overlays_staff,   (0, 0), globals.overlays_staff  )
+            img.paste(globals.overlays_staff_MH,   (0, 0), globals.overlays_staff_MH  )
         else:
-            img.paste(globals.overlays_default, (0, 0), globals.overlays_default)
+            img.paste(globals.overlays_default_MH, (0, 0), globals.overlays_default_MH)
 
         # Draw username
         username = target.name.encode('ascii', 'replace').decode('ascii')  # Remove non-ascii glyphs
         utils.draw_text(draw, globals.font35, username, "#FFFFFF", (268, 85), 298)
 
         # Draw main level and cred values
-        utils.draw_text(draw, globals.font47, f"LV:{level[0]}", "#009EDF", (277, 141), 999)
+        if target.id == globals.ADMIN_ID:
+          utils.draw_text(draw, globals.font47, f"LV:{level[0]}", "#009EDF", (277, 141), 999)
+        else:
+          utils.draw_text(draw, globals.font47, f"LV:{level[0]}", "#F06B02", (277, 141), 999)
+          
         if target.id == globals.ADMIN_ID:
             utils.draw_text(draw, globals.font47, f"SC:{cred[0]}",  "#16F2D6", (434, 141), 999)
         else:
-            utils.draw_text(draw, globals.font47, f"SC:{cred[0]}",  "#F06B02", (434, 141), 999)
+            utils.draw_text(draw, globals.font47, f"SC:{cred[0]}",  "#E10000", (434, 141), 999)
 
         # Draw trophy shards
         x = 267
@@ -148,9 +152,9 @@ class Levelling(commands.Cog,
             cred_bar =   globals.bars[ "blue_white" ][utils.get_bar_index_from_lvl_percent( cred_next )]
             assist_bar = globals.bars[ "white_blue" ][utils.get_bar_index_from_lvl_percent(assist_next)]
         else:
-            level_bar =  globals.bars[ "blue_white" ][utils.get_bar_index_from_lvl_percent(level_next )]
-            cred_bar =   globals.bars["orange_white"][utils.get_bar_index_from_lvl_percent( cred_next )]
-            assist_bar = globals.bars["white_orange"][utils.get_bar_index_from_lvl_percent(assist_next)]
+            level_bar =  globals.bars[ "orange_white" ][utils.get_bar_index_from_lvl_percent(level_next )]
+            cred_bar =   globals.bars[ "red_white" ][utils.get_bar_index_from_lvl_percent( cred_next )]
+            assist_bar = globals.bars[ "white_orange" ][utils.get_bar_index_from_lvl_percent(assist_next)]
         img.paste(level_bar,  (218, 457), level_bar )
         img.paste(cred_bar,   (218, 550), cred_bar  )
         img.paste(assist_bar, (218, 650), assist_bar)
