@@ -9,7 +9,7 @@ Custom Discord bot for Modding Haven.
  - Reputation command
  - Daily reward
  - Dice command
- - CyberCookie and SpaceBurrito commands
+ - Herb and SpaceBurrito commands
  - Level up notification
  - Join message
 
