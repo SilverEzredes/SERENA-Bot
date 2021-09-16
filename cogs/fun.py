@@ -11,11 +11,11 @@ class Fun(commands.Cog,
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="cookie",
-                      description="Treat someone to a CyberCookie (cosmetic, no rewards)",
-                      usage="{prfx}cookie [ user ]",
-                      help="user: the user to give a cookie to (ping, name, id) (optional)",
-                      aliases=["cybcookie", "cybercookie"])
+    @commands.command(name="herb",
+                      description="Roll someone a G+G+G blunt (cosmetic, no rewards)",
+                      usage="{prfx}herb [ user ]",
+                      help="user: the user to give a blunt to (ping, name, id) (optional)",
+                      aliases=["blunt", "based",])
     async def cookie(self, ctx, target: Union[discord.Member, discord.User, int, str] = None):
         # Convert target input to discord.Member
         if not target:
@@ -41,16 +41,16 @@ class Fun(commands.Cog,
         if target.id != ctx.author.id:
             await utils.embed_reply(ctx,
                                     content=f"<@!{target.id}>",
-                                    title=f"🍪 CyberCookie!",
-                                    description=f"<@!{ctx.author.id}> just gave you a delicious Cyber🤖Cookie🍪!\n"
-                                                f"Eat it before it vaporizes you!",
-                                    thumbnail="https://cdn.discordapp.com/emojis/766054797673496596.png")
+                                    title=f"🌿 Herb!",
+                                    description=f"<@!{ctx.author.id}> just rolled you a G+G+G blunt of the greenest herb🌿!\n"
+                                                f"A mixture of 3 Green Herbs. Completely restores health.",
+                                    thumbnail="https://cdn.discordapp.com/emojis/762601822979358751.png?v=1")
         else:
             await utils.embed_reply(ctx,
-                                    title=f"🍪 CyberCookie!",
-                                    description=f"<@!{ctx.author.id}> doesn't have any friends yet so they treated themselves to a delicious Cyber🤖Cookie🍪!\n"
-                                                f"Time to eagerly eat it in complete silence!",
-                                    thumbnail="https://cdn.discordapp.com/emojis/766054797673496596.png")
+                                    title=f"🌿 Herb!",
+                                    description=f"<@!{ctx.author.id}> found some funny looking plant and decided to smoke it🌿!\n"
+                                                f"Herb that restores partial health.",
+                                    thumbnail="https://cdn.discordapp.com/emojis/762601822979358751.png?v=1")
 
     @commands.command(name="burrito",
                       description="Deliver someone a SpaceBurrito (cosmetic, no rewards)",
