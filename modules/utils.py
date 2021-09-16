@@ -230,14 +230,14 @@ def custom_embed(guild, *, title="", description="", fields=[], thumbnail=None, 
     if add_timestamp:
         embed_to_send = (discord.Embed(title=title,
                                     description=description,
-                                    color=discord.Color(0xEDE400),
+                                    color=discord.Color(0xFFA724),
                                     timestamp=datetime.datetime.utcnow())
                                     .set_footer(text=guild.name,
                                                 icon_url=guild.icon_url))
     else:
         embed_to_send = (discord.Embed(title=title,
                                     description=description,
-                                    color=discord.Color(0xEDE400))
+                                    color=discord.Color(0xFFA724))
                                     .set_footer(text=guild.name,
                                                 icon_url=guild.icon_url))
     if image:
