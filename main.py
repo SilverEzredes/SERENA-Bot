@@ -6,9 +6,7 @@ import asyncio
 import signal
 import json
 import time
-import sys
 import os
-
 
 # Local imports
 from modules import globals, utils, xp
