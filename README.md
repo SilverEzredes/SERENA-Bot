@@ -1,5 +1,5 @@
-# A.L.T.I.E.R.A. Bot
-Custom Discord bot for the Cyberpunk 2077 Modding Servers
+# D.O.L.O.R.E.S. Bot
+Custom Discord bot for Modding Haven.
 
 ## Features:
  - Leveling system for:
@@ -14,7 +14,8 @@ Custom Discord bot for the Cyberpunk 2077 Modding Servers
  - Join message
 
 ## To Do:
- - Mod requests system
+ - Change the burrito commands.
+ - MH Orange embed bar.
 
 ## Credits:
-SilverEzredes#4826 for the amazing image assets
+WillyJL#3633 for his amazing coding skills.
