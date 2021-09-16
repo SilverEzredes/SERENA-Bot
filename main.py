@@ -68,7 +68,7 @@ if __name__ == '__main__':
     intents.members = True
     intents.presences = True
     # Create bot
-    globals.bot = commands.Bot(globals.BOT_PREFIX, intents=intents, case_insensitive=True)
+    globals.bot = commands.Bot(command_prefix=utils.case_insensitive(globals.BOT_PREFIX), intents=intents, case_insensitive=True)
     globals.bot.remove_command('help')
     globals.bot.load_extension('cogs.bot')
     globals.bot.load_extension('cogs.fun')
@@ -141,7 +141,7 @@ if __name__ == '__main__':
     # Message handler and callback dispatcher
     @globals.bot.event
     async def on_message(message):
-        if message.content and message.content.startswith(globals.bot.command_prefix):
+        if message.content and message.content.lower().startswith(globals.BOT_PREFIX.lower()):
             await globals.bot.process_commands(message)
         else:
             await xp.process_xp(message)
