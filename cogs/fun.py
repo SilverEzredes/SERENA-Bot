@@ -52,9 +52,9 @@ class Fun(commands.Cog,
                                                 f"Herb that restores partial health.",
                                     thumbnail="https://cdn.discordapp.com/emojis/762601822979358751.png")
 
-    @commands.command(name="choco bar",
+    @commands.command(name="chocobar",
                       description="Treat someone with a delicious SewerChocolate™️ (cosmetic, no rewards)",
-                      usage="{prfx}choco bar [ user ]",
+                      usage="{prfx}chocobar [ user ]",
                       help="user: the user to give a choco bar to (ping, name, id) (optional)",
                       aliases=["chocolate bar", "sewerchocolate", "choco", "sewerchoco"])
     async def burrito(self, ctx, target: Union[discord.Member, discord.User, int, str] = None):
