@@ -9,12 +9,12 @@ Custom Discord bot for Modding Haven.
  - Reputation command
  - Daily reward
  - Dice command
- - Herb and SpaceBurrito commands
+ - Herb and Sewer Chocolate commands
  - Level up notification
  - Join message
 
 ## To Do:
- - Add MH Admin background and overlay.
+ - Add MH level up cards.
 
 ## Credits:
 WillyJL#3633 for his amazing coding skills.
