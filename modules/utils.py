@@ -103,10 +103,12 @@ def setup_persistent_components():
     globals.overlays_admin =   Image.open('assets/overlays/admin.png'  )
     globals.overlays_default_MH =   Image.open('assets/overlays/default_MH.png'  )
     globals.overlays_staff_MH =   Image.open('assets/overlays/staff_MH.png'  )
+    globals.overlays_admin_MH =   Image.open('assets/overlays/admin_MH.png'  )
 
     globals.shards_orange = Image.open("assets/shards/orange.png").resize((33, 28))
     globals.shards_white =  Image.open("assets/shards/white.png" ).resize((33, 28))
     globals.shards_teal =   Image.open("assets/shards/teal.png"  ).resize((33, 28))
+    globals.shards_red =   Image.open("assets/shards/red.png"  ).resize((33, 28))
 
     globals.bars = {}
     for color in ["blue_white", "orange_white", "teal_white", "white_blue", "white_orange", "red_white"]:
