@@ -14,9 +14,7 @@ Custom Discord bot for Modding Haven.
  - Join message
 
 ## To Do:
- - Add MH shard.
  - Add MH Admin background and overlay.
- - Add trophy roles.
 
 ## Credits:
 WillyJL#3633 for his amazing coding skills.
