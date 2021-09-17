@@ -60,7 +60,7 @@ class Levelling(commands.Cog,
 
         # Setup image foundation
         if target.id == globals.ADMIN_ID:
-            img = Image.open("assets/backgrounds/admin.png"  )
+            img = Image.open("assets/backgrounds/staff_bg_MH.png"  )
         elif utils.is_staff(target):
             img = Image.open("assets/backgrounds/staff_bg_MH.png"  )
         else:
@@ -79,7 +79,7 @@ class Levelling(commands.Cog,
 
         # Apply base overlay
         if target.id == globals.ADMIN_ID:
-            img.paste(globals.overlays_admin,   (0, 0), globals.overlays_admin  )
+            img.paste(globals.overlays_admin_MH,   (0, 0), globals.overlays_admin_MH  )
         elif utils.is_staff(target):
             img.paste(globals.overlays_staff_MH,   (0, 0), globals.overlays_staff_MH  )
         else:
@@ -107,7 +107,7 @@ class Levelling(commands.Cog,
                 img.paste(    globals.shards_white,  (x, 194), globals.shards_white )
             else:
                 if target.id == globals.ADMIN_ID:
-                    img.paste(globals.shards_teal,   (x, 194), globals.shards_teal  )
+                    img.paste(globals.shards_red,   (x, 194), globals.shards_red  )
                 else:
                     img.paste(globals.shards_orange, (x, 194), globals.shards_orange)
             x += 24
@@ -147,9 +147,9 @@ class Levelling(commands.Cog,
 
         # Overlay percentage bars
         if target.id == globals.ADMIN_ID:
-            level_bar =  globals.bars[ "teal_white" ][utils.get_bar_index_from_lvl_percent(level_next )]
-            cred_bar =   globals.bars[ "blue_white" ][utils.get_bar_index_from_lvl_percent( cred_next )]
-            assist_bar = globals.bars[ "white_blue" ][utils.get_bar_index_from_lvl_percent(assist_next)]
+            level_bar =  globals.bars[ "orange_white" ][utils.get_bar_index_from_lvl_percent(level_next )]
+            cred_bar =   globals.bars[ "red_white" ][utils.get_bar_index_from_lvl_percent( cred_next )]
+            assist_bar = globals.bars[ "white_orange" ][utils.get_bar_index_from_lvl_percent(assist_next)]
         else:
             level_bar =  globals.bars[ "orange_white" ][utils.get_bar_index_from_lvl_percent(level_next )]
             cred_bar =   globals.bars[ "red_white" ][utils.get_bar_index_from_lvl_percent( cred_next )]
