@@ -14,6 +14,8 @@ Custom Discord bot for Modding Haven.
  - Join message
 
 ## To Do:
+ - Request System (bully WillyJL)
+ - Auto-Role System
 
 ## Credits:
 WillyJL#3633 for his amazing coding skills.
