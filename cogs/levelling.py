@@ -91,9 +91,9 @@ class Levelling(commands.Cog,
 
         # Draw main level and cred values
         if target.id == globals.ADMIN_ID:
-          utils.draw_text(draw, globals.font47, f"LV:{level[0]}", "#009EDF", (277, 141), 999)
+          utils.draw_text(draw, globals.font47, f"LV:{level[0]}", "#16F2D6", (277, 141), 999)
         else:
-          utils.draw_text(draw, globals.font47, f"LV:{level[0]}", "#F06B02", (277, 141), 999)
+          utils.draw_text(draw, globals.font47, f"LV:{level[0]}", "#E10000", (277, 141), 999)
           
         if target.id == globals.ADMIN_ID:
             utils.draw_text(draw, globals.font47, f"SC:{cred[0]}",  "#16F2D6", (434, 141), 999)
@@ -114,16 +114,16 @@ class Levelling(commands.Cog,
 
         # Draw single level values
         if target.id == globals.ADMIN_ID:
-            utils.draw_text(draw, globals.font16, f"LVL:",        "#090D18", (275, 425), 999)
-            utils.draw_text(draw, globals.font24, f"{level[0]}",  "#090D18", (308, 423), 999)
+            utils.draw_text(draw, globals.font16, f"LVL:",        "#FFFFFF", (275, 425), 999)
+            utils.draw_text(draw, globals.font24, f"{level[0]}",  "#FFFFFF", (308, 423), 999)
         else:
             utils.draw_text(draw, globals.font16, f"LVL:",        "#FFFFFF", (275, 425), 999)
             utils.draw_text(draw, globals.font24, f"{level[0]}",  "#FFFFFF", (308, 423), 999)
         utils.draw_text(draw, globals.font16, f"LVL:",        "#FFFFFF", (275, 518), 999)
         utils.draw_text(draw, globals.font24, f"{cred[0]}",   "#FFFFFF", (308, 516), 999)
         if target.id == globals.ADMIN_ID:
-            utils.draw_text(draw, globals.font16, f"LVL:",        "#009EDF", (275, 619), 999)
-            utils.draw_text(draw, globals.font24, f"{assist[0]}", "#009EDF", (308, 617), 999)
+            utils.draw_text(draw, globals.font16, f"LVL:",        "#FFFFFF", (275, 619), 999)
+            utils.draw_text(draw, globals.font24, f"{assist[0]}", "#FFFFFF", (308, 617), 999)
         else:
             utils.draw_text(draw, globals.font16, f"LVL:",        "#F06B02", (275, 619), 999)
             utils.draw_text(draw, globals.font24, f"{assist[0]}", "#F06B02", (308, 617), 999)
