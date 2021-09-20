@@ -14,7 +14,7 @@ Custom Discord bot for Modding Haven.
  - Join message
 
 ## To Do:
- - Request System (bully WillyJL)
+ - Implement Request System for MH.
  - Auto-Role System
 
 ## Credits:
