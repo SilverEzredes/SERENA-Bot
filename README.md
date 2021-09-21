@@ -15,6 +15,7 @@ Custom Discord bot for Modding Haven.
 
 ## To Do:
  - Implement Request System for MH.
+ - Add blue herb command.
  - Auto-Role System
 
 ## Credits:
