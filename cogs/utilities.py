@@ -20,37 +20,38 @@ class Utilities(commands.Cog,
                            "modifier: number to add or subtract from result, default 0, max +100/-100 (optional)",
                       aliases=["diceroll", "rolldice", "roll"])
     async def dice(self, ctx, arg1: str = None, arg2: str = None, arg3: str = None):
+        # Arg1
         if arg1 is not None:
             try:
-                max = int(arg1)
-            except (ValueError, TypeError):
+                max = int(utils.strip_argument(arg1))
+            except (ValueError, TypeError,):
                 await utils.embed_reply(ctx,
-                                        title=f"💢 Please provide a valid number!")
+                                        title="💢 Please provide a valid number!")
                 return
         else:
             max = 6
-
+        # Arg2
         if arg2 is not None:
             throws = max
             try:
-                max = int(arg2)
-            except (ValueError, TypeError):
+                max = int(utils.strip_argument(arg2))
+            except (ValueError, TypeError,):
                 await utils.embed_reply(ctx,
-                                        title=f"💢 Please provide valid numbers!")
+                                        title="💢 Please provide valid numbers!")
                 return
         else:
             throws = 1
-
+        # Arg3
         if arg3 is not None:
             try:
-                mod = int(arg3)
-            except (ValueError, TypeError):
+                mod = int(utils.strip_argument(arg3))
+            except (ValueError, TypeError,):
                 await utils.embed_reply(ctx,
-                                        title=f"💢 Please provide valid numbers!")
+                                        title="💢 Please provide valid numbers!")
                 return
         else:
             mod = 0
-
+        # Adjustments
         throws_adjusted = False
         max_adjusted = False
         mod_adjusted = False
@@ -72,7 +73,7 @@ class Utilities(commands.Cog,
         if mod < -100:
             mod = -100
             mod_adjusted = True
-
+        # Actual command
         result = 0
         rolls = []
         for _ in range(throws):
@@ -81,11 +82,11 @@ class Utilities(commands.Cog,
             rolls.append(str(roll))
         result += mod
         await utils.embed_reply(ctx,
-                                title=f"🎲 Dice roll!",
+                                title="🎲 Dice roll!",
                                 description=f'Throws: {throws}{" (adjusted)" if throws_adjusted else ""}\n'
                                             f'Max: {max}{" (adjusted)" if max_adjusted else ""}\n'
                                             f'Modifier: {mod:+}{" (adjusted)" if mod_adjusted else ""}\n'
-                                            f'\n'
+                                            '\n'
                                             f'Result:  __**{str(result)}**__ ( `{", ".join(rolls)}{f", {mod:+}" if mod != 0 else ""}` )',
                                 add_timestamp=False)
 

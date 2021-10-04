@@ -21,8 +21,10 @@ class Bot(commands.Cog,
                       help="subcommand: the submenu/command to look up (optional)",
                       aliases=[])
     async def help(self, ctx, subcommand=None):
-        prfx = globals.BOT_PREFIX
-        if subcommand and subcommand.startswith(prfx):
+        prfx = globals.BOT_PREFIX.lower()
+        if subcommand:
+            subcommand = utils.strip_argument(subcommand)
+        if subcommand and subcommand.lower().startswith(prfx):
             subcommand = subcommand[len(prfx):]
         if subcommand:
             subcommand = subcommand.lower()
@@ -35,7 +37,7 @@ class Bot(commands.Cog,
                     if "staff" in cog_name.lower() and not utils.is_staff(ctx.author):
                         desc += "These are **staff only** commands, you can't use them!\n\n"
                     desc += cog.description + "\n\n"
-                    for command in cog.get_commands():
+                    for command in sorted(cog.get_commands(), key=lambda x: x.name):
                         desc += f'{prfx}**{command.name}**: ' + (command.description[:command.description.find("\n")] if "\n" in command.description else command.description) + '\n'
                     desc += f"\nYou can use `{prfx}help [ command ]` to see more info about it!\n"
                     desc += f"**\nD.O.L.O.R.E.S. Bot**{(' `' + os.environ.get('HEROKU_RELEASE_VERSION') + '`') if os.environ.get('HEROKU_RELEASE_VERSION') else ''}, made with ❤️ by [WillyJL](https://linktr.ee/WillyJL)"
@@ -64,7 +66,7 @@ class Bot(commands.Cog,
                                             description=desc)
                     return
         desc = "You can use these commands to see a category of commands:\n\n"
-        for cog_name in globals.bot.cogs:
+        for cog_name in sorted(list(globals.bot.cogs)):
             if cog_name.lower() == "jishaku":
                 continue
             if "staff" in cog_name.lower() and not utils.is_staff(ctx.author):
@@ -74,7 +76,7 @@ class Bot(commands.Cog,
         desc += f"\nYou can use `{prfx}help [ command ]` to see more info about it!\n"
         desc += f"\n**D.O.L.O.R.E.S. Bot**{(' `' + os.environ.get('HEROKU_RELEASE_VERSION') + '`') if os.environ.get('HEROKU_RELEASE_VERSION') else ''}, made with ❤️ by [WillyJL](https://linktr.ee/WillyJL)"
         await utils.embed_reply(ctx,
-                                title=f"⁉️   D.O.L.O.R.E.S. Help",
+                                title="⁉️   D.O.L.O.R.E.S. Help",
                                 description=desc)
         return
 
@@ -93,7 +95,7 @@ class Bot(commands.Cog,
                                     ["📟 CPU Usage",        f"{psutil.cpu_percent()}%",                                                                                                                                            True],
                                     ["💾 RAM Usage",        f"{utils.pretty_size(psutil.Process(os.getpid()).memory_info().rss)}/{'512MB' if os.environ.get('DYNO') else utils.pretty_size(psutil.virtual_memory().total)}",       True],
                                     ["🚀 Last Update",      f"{datetime.datetime.fromisoformat(os.environ.get('HEROKU_RELEASE_CREATED_AT')[:-1]).strftime('%d/%m/%Y') if os.environ.get('HEROKU_RELEASE_CREATED_AT') else 'N/A'}", True],
-                                    ["👨‍💻 Developer",        f"[WillyJL](https://linktr.ee/WillyJL)",                                                                                                                               True],
+                                    ["👨‍💻 Developer",        "[WillyJL](https://linktr.ee/WillyJL)",                                                                                                                               True],
                                     ["📚 Library",          f"discord.py v{discord.__version__}",                                                                                                                                  True],
                                     ["📦 Version",          f"{os.environ.get('HEROKU_RELEASE_VERSION') if os.environ.get('HEROKU_RELEASE_VERSION') else 'N/A'}",                                                                  True],
                                 ],

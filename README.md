@@ -8,6 +8,7 @@ Custom Discord bot for Modding Haven.
    - Assistance
  - Reputation command
  - Daily reward
+ - Mod requests system
  - Dice command
  - Herb and Sewer Chocolate commands
  - Level up notification
@@ -16,7 +17,7 @@ Custom Discord bot for Modding Haven.
 ## To Do:
  - Implement Request System for MH.
  - Add blue herb command.
- - Auto-Role System
+ - Auto-Role System.
 
 ## Credits:
 WillyJL#3633 for his amazing coding skills.
