@@ -1,5 +1,5 @@
-# A.L.T.I.E.R.A. Bot
-Custom Discord bot for the Cyberpunk 2077 Modding Servers
+# D.O.L.O.R.E.S. Bot
+Custom Discord bot for Modding Haven.
 
 ## Features:
  - Leveling system for:
@@ -10,12 +10,14 @@ Custom Discord bot for the Cyberpunk 2077 Modding Servers
  - Daily reward
  - Mod requests system
  - Dice command
- - CyberCookie and SpaceBurrito commands
+ - Herb and Sewer Chocolate commands
  - Level up notification
  - Join message
 
 ## To Do:
- - idk
+ - Implement Request System for MH.
+ - Add blue herb command.
+ - Auto-Role System.
 
 ## Credits:
-SilverEzredes#4826 for the amazing image assets
+WillyJL#3633 for his amazing coding skills.

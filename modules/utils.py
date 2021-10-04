@@ -125,16 +125,20 @@ def setup_persistent_components():
     # Avatars
     globals.default_avatar = Image.open('assets/default_avatar.png').resize((200, 200))
     # Overlays
-    globals.overlays_default = Image.open('assets/overlays/default.png')
-    globals.overlays_staff   = Image.open('assets/overlays/staff.png'  )
-    globals.overlays_admin   = Image.open('assets/overlays/admin.png'  )
+    globals.overlays_default    = Image.open('assets/overlays/default.png'   )
+    globals.overlays_staff      = Image.open('assets/overlays/staff.png'     )
+    globals.overlays_admin      = Image.open('assets/overlays/admin.png'     )
+    globals.overlays_default_MH = Image.open('assets/overlays/default_MH.png')
+    globals.overlays_staff_MH   = Image.open('assets/overlays/staff_MH.png'  )
+    globals.overlays_admin_MH   = Image.open('assets/overlays/admin_MH.png'  )
     # Shards
-    globals.shards_orange = Image.open("assets/shards/orange.png").resize((33, 28))
-    globals.shards_white  = Image.open("assets/shards/white.png" ).resize((33, 28))
-    globals.shards_teal   = Image.open("assets/shards/teal.png"  ).resize((33, 28))
+    globals.shards_orange = Image.open("assets/shards/orange.png").resize((33, 28,))
+    globals.shards_white  = Image.open("assets/shards/white.png" ).resize((33, 28,))
+    globals.shards_teal   = Image.open("assets/shards/teal.png"  ).resize((33, 28,))
+    globals.shards_red    = Image.open("assets/shards/red.png"   ).resize((33, 28,))
     # Bars
     globals.bars = {}
-    for color in ["blue_white", "orange_white", "teal_white", "white_blue", "white_orange"]:
+    for color in ["blue_white", "orange_white", "teal_white", "white_blue", "white_orange", "red_white"]:
         globals.bars[color] = []
         for i in range(11):
             globals.bars[color].append(Image.open(f"assets/bars/{color}/{i}.png"))
@@ -265,14 +269,14 @@ def custom_embed(guild, *, title="", description="", fields=[], thumbnail=None, 
     if add_timestamp:
         embed_to_send = (discord.Embed(title=title,
                                        description=description,
-                                       color=discord.Color(0xEDE400),
+                                       color=discord.Color(0xFFA724),
                                        timestamp=datetime.datetime.utcnow())
                                        .set_footer(text=guild.name,
                                                    icon_url=guild.icon_url))
     else:
         embed_to_send = (discord.Embed(title=title,
                                        description=description,
-                                       color=discord.Color(0xEDE400))
+                                       color=discord.Color(0xFFA724))
                                        .set_footer(text=guild.name,
                                                    icon_url=guild.icon_url))
     if image:
