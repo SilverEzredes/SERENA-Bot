@@ -11,11 +11,11 @@ class Fun(commands.Cog,
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="cookie",
-                      description="Treat someone to a CyberCookie (cosmetic, no rewards)",
-                      usage="{prfx}cookie [ user ]",
-                      help="user: the user to give a cookie to (ping, name, id) (optional)",
-                      aliases=["cybcookie", "cybercookie"])
+    @commands.command(name="herb",
+                      description="Roll someone a G+G+G blunt (cosmetic, no rewards)",
+                      usage="{prfx}herb [ user ]",
+                      help="user: the user to give a blunt to (ping, name, id) (optional)",
+                      aliases=["blunt", "based",])
     async def cookie(self, ctx, target: Union[discord.Member, discord.User, int, str] = None):
         # Convert target input to discord.Member
         if not target:
@@ -41,22 +41,22 @@ class Fun(commands.Cog,
         if target.id != ctx.author.id:
             await utils.embed_reply(ctx,
                                     content=f"<@!{target.id}>",
-                                    title="🍪 CyberCookie!",
-                                    description=f"<@!{ctx.author.id}> just gave you a delicious Cyber🤖Cookie🍪!\n"
-                                                "Eat it before it vaporizes you!",
-                                    thumbnail="https://cdn.discordapp.com/emojis/766054797673496596.png")
+                                    title="🌿 Herb!",
+                                    description=f"<@!{ctx.author.id}> just rolled you a G+G+G blunt of the greenest herb🌿!\n"
+                                                "A mixture of 3 Green Herbs. Completely restores health.",
+                                    thumbnail="https://cdn.discordapp.com/emojis/762601822979358751.png")
         else:
             await utils.embed_reply(ctx,
-                                    title="🍪 CyberCookie!",
-                                    description=f"<@!{ctx.author.id}> doesn't have any friends yet so they treated themselves to a delicious Cyber🤖Cookie🍪!\n"
-                                                "Time to eagerly eat it in complete silence!",
-                                    thumbnail="https://cdn.discordapp.com/emojis/766054797673496596.png")
+                                    title="🌿 Herb!",
+                                    description=f"<@!{ctx.author.id}> found some funny looking plant and decided to smoke it🌿!\n"
+                                                "Herb that restores partial health.",
+                                    thumbnail="https://cdn.discordapp.com/emojis/762601822979358751.png")
 
-    @commands.command(name="burrito",
-                      description="Deliver someone a SpaceBurrito (cosmetic, no rewards)",
-                      usage="{prfx}burrito [ user ]",
-                      help="user: the user to give a burrito to (ping, name, id) (optional)",
-                      aliases=["spaceburrito", "galacticburrito"])
+    @commands.command(name="chocobar",
+                      description="Treat someone with a delicious SewerChocolate™️ (cosmetic, no rewards)",
+                      usage="{prfx}chocobar [ user ]",
+                      help="user: the user to give a choco bar to (ping, name, id) (optional)",
+                      aliases=["chocolatebar", "sewerchocolate", "choco", "sewerchoco"])
     async def burrito(self, ctx, target: Union[discord.Member, discord.User, int, str] = None):
         # Convert target input to discord.Member
         if not target:
@@ -82,16 +82,16 @@ class Fun(commands.Cog,
         if target.id != ctx.author.id:
             await utils.embed_reply(ctx,
                                     content=f"<@!{target.id}>",
-                                    title="🌯 SpaceBurrito!",
-                                    description=f"<@!{ctx.author.id}> just delivered you a delicious Space🌌Burrito🌯!\n"
-                                                "Eat it before it gets cold!",
-                                    thumbnail="https://cdn.discordapp.com/emojis/779465397903949825.png")
+                                    title="🍫 Sewer Chocolate™️!",
+                                    description=f"<@!{ctx.author.id}> just delivered you a delicious 🍫 Sewer Chocolate™️🍫!\n"
+                                                "Just don't look at the expiration date...",
+                                    thumbnail="https://cdn.discordapp.com/emojis/888191417556561980.png")
         else:
             await utils.embed_reply(ctx,
-                                    title="🌯 SpaceBurrito!",
-                                    description=f"<@!{ctx.author.id}> doesn't have any friends yet so they bought themselves a delicious Space🌌Burrito🌯!\n"
-                                                "Time to eagerly enjoy it in complete silence!",
-                                    thumbnail="https://cdn.discordapp.com/emojis/779465397903949825.png")
+                                    title="🍫 Sewer Chocolate™️!",
+                                    description=f"<@!{ctx.author.id}> found some 🍫 chocolate bar looking thing while exploring the sewers.\n"
+                                                "Are you really considering eating that?",
+                                    thumbnail="https://cdn.discordapp.com/emojis/888191417556561980.png")
 
     @commands.command(name="pat",
                       description="Pat someone (cosmetic, no rewards)",

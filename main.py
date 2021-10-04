@@ -150,7 +150,7 @@ if __name__ == '__main__':
             await channel.send(content=f"<@!{member.id}>",
                                embed=utils.custom_embed(member.guild,
                                                         title="👋 Welcome!",
-                                                        description=f"Welcome <@!{member.id}> to Night City!\n"
+                                                        description=f"Welcome <@!{member.id}> to Modding Haven!\n"
                                                                     "\n" +
                                                                     (f"Make sure you have read through <#{globals.JOIN_LOG_CHANNEL_IDS[str(member.guild.id)]['rules_channel_id']}>!\n" if globals.JOIN_LOG_CHANNEL_IDS[str(member.guild.id)]["rules_channel_id"] else "") +
                                                                     (f"You can pick your poisons in <#{globals.JOIN_LOG_CHANNEL_IDS[str(member.guild.id)]['selfrole_channel_id']}>!\n" if globals.JOIN_LOG_CHANNEL_IDS[str(member.guild.id)]["selfrole_channel_id"] else "") +
