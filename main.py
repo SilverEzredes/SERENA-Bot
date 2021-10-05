@@ -153,7 +153,7 @@ if __name__ == '__main__':
                                                         description=f"Welcome <@!{member.id}> to Modding Haven!\n"
                                                                     "\n" +
                                                                     (f"Make sure you have read through <#{globals.JOIN_LOG_CHANNEL_IDS[str(member.guild.id)]['rules_channel_id']}>!\n" if globals.JOIN_LOG_CHANNEL_IDS[str(member.guild.id)]["rules_channel_id"] else "") +
-                                                                    (f"React in <#{globals.JOIN_LOG_CHANNEL_IDS[str(member.guild.id)]['selfrole_channel_id']}> to gain access to the rest of the channels!\n" if globals.JOIN_LOG_CHANNEL_IDS[str(member.guild.id)]["selfrole_channel_id"] else "") +
+                                                                    (f"Head to <#{globals.JOIN_LOG_CHANNEL_IDS[str(member.guild.id)]['selfrole_channel_id']}> and react to Master of Unlocking to gain access to the rest of the modding channels!\n" if globals.JOIN_LOG_CHANNEL_IDS[str(member.guild.id)]["selfrole_channel_id"] else "") +
                                                                     "Enjoy your stay!",
                                                         thumbnail=member.avatar_url))
 
