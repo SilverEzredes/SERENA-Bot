@@ -34,6 +34,7 @@ globals.GITHUB_GIST_ID           = str       (os.environ.get("GITHUB_GIST_ID")  
 globals.GITHUB_GIST_TOKEN        = str       (os.environ.get("GITHUB_GIST_TOKEN")        or "")
 globals.GITHUB_GIST_USER         = str       (os.environ.get("GITHUB_GIST_USER")         or "")
 globals.HEROKU_TOKEN             = str       (os.environ.get("HEROKU_TOKEN")             or "")
+globals.ICON_ROLE_IDS            = json.loads(os.environ.get("ICON_ROLE_IDS")            or "{}")
 globals.IMGUR_CLIENT_ID          = str       (os.environ.get("IMGUR_CLIENT_ID")          or "")
 globals.JOIN_LOG_CHANNEL_IDS     = json.loads(os.environ.get("JOIN_LOG_CHANNEL_IDS")     or "{}")
 globals.LEVEL_NOTIF_CHANNEL_IDS  = json.loads(os.environ.get("LEVEL_NOTIF_CHANNEL_IDS")  or "{}")
@@ -85,8 +86,10 @@ if __name__ == '__main__':
     intents = discord.Intents.default()
     intents.members = True
     intents.presences = True
+    # Avoid unwanted chaos
+    allowed_mentions = discord.AllowedMentions(everyone=False, roles=False)
     # Create bot
-    globals.bot = commands.Bot(command_prefix=utils.case_insensitive(globals.BOT_PREFIX), intents=intents, case_insensitive=True)
+    globals.bot = commands.Bot(command_prefix=utils.case_insensitive(globals.BOT_PREFIX), case_insensitive=True, intents=intents, allowed_mentions=allowed_mentions)
     globals.bot.remove_command('help')
     globals.bot.load_extension('cogs.bot')
     globals.bot.load_extension('cogs.fun')
@@ -134,6 +137,9 @@ if __name__ == '__main__':
     @globals.bot.event
     async def on_command_error(ctx, error):
         if isinstance(error, commands.errors.CommandNotFound):
+            await utils.embed_reply(ctx,
+                                    title=f'💢 Unknown command "{ctx.invoked_with}"!',
+                                    description=f"Did you mean **`{globals.BOT_PREFIX.lower()}{utils.get_best_command_match(ctx.invoked_with)}`**?")
             return
         if isinstance(error, commands.errors.NotOwner):
             await utils.embed_reply(ctx,

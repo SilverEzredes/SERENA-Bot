@@ -80,6 +80,8 @@ async def process_xp(message):
         await notify_level_up(message, "cred",       cred,       new_cred      )
     if new_assistance > assistance:
         await notify_level_up(message, "assistance", assistance, new_assistance)
+    # Handle icon roles
+    await utils.manage_icon_role_for_user(message.author)
     # Revert contrib boost if message is deleted
     if added_contrib_boost:
         try:
@@ -89,6 +91,7 @@ async def process_xp(message):
             while globals.ticking_cooldowns:
                 await asyncio.sleep(0.25)
             del contrib_cooldowns[message.author.id]
+            await utils.manage_icon_role_for_user(message.author)
         except asyncio.TimeoutError:
             # Message not deleted, leave boost
             pass
@@ -126,14 +129,14 @@ async def tick_cooldowns():
         await asyncio.sleep(5)
         globals.ticking_cooldowns = True
         to_remove = []
-        for user_id in cooldowns:
-            if cooldowns[user_id] < time.time():
+        for user_id, user_cooldown in cooldowns.items():
+            if user_cooldown < time.time():
                 to_remove.append(user_id)
         for user_id in to_remove:
             del cooldowns[user_id]
         to_remove = []
-        for user_id in contrib_cooldowns:
-            if contrib_cooldowns[user_id] < time.time():
+        for user_id, user_cooldown in contrib_cooldowns.items():
+            if user_cooldown < time.time():
                 to_remove.append(user_id)
         for user_id in to_remove:
             del contrib_cooldowns[user_id]

@@ -13,7 +13,12 @@ cooldowns = dict()
 
 
 class Requests(commands.Cog,
-               description="Mod requests / ideas management"):
+               description="Mod requests / ideas management\n"
+                           "These commands can only be used in the dedicated mod requests channels\n"
+                           "There is a 10 minute cooldown on new requests, you can add 1 image per request\n"
+                           "If you are a modder and wish to work on a request, claim it with `a/claim [ id ]`\n"
+                           "When it is complete, release it with `a/release [ id ] [ link ]`\n"
+                           "If a request already exists in a mod, link it with `a/link [ id ] [ link ]`"):
     def __init__(self, bot):
         self.bot = bot
 
@@ -115,7 +120,7 @@ class Requests(commands.Cog,
             cooldowns[ctx.author.id] = time.time() + globals.REQUESTS_COOLDOWN
 
     @commands.command(name="edit",
-                      description="Edit a mod request",
+                      description="Edit a mod request's description",
                       usage="{prfx}edit [ id ] [ description ]",
                       help="id: the id of the request to edit (required)\n"
                            "description: your request (required), you can optionally add a single image (attachment)\n"
@@ -328,7 +333,7 @@ class Requests(commands.Cog,
         await ctx.message.delete()
 
     @commands.command(name="claim",
-                      description="Claim a mod request",
+                      description="Claim a mod request, mark it as WIP",
                       usage="{prfx}claim [ id ]",
                       help="id: the id of the request to claim (required)",
                       aliases=["wip"])
@@ -410,7 +415,7 @@ class Requests(commands.Cog,
         await ctx.message.delete()
 
     @commands.command(name="unclaim",
-                      description="Unclaim a mod request",
+                      description="Unclaim a mod request, remove WIP status",
                       usage="{prfx}unclaim [ id ]",
                       help="id: the id of the request to unclaim (required)",
                       aliases=["abandon"])
@@ -492,7 +497,7 @@ class Requests(commands.Cog,
         await ctx.message.delete()
 
     @commands.command(name="release",
-                      description="Release a mod request",
+                      description="Release a mod request, needs to be claimed first",
                       usage="{prfx}release [ id ] [ link ]",
                       help="id: the id of the request to release (required)\n"
                            "link: the link to the released mod (required)",
@@ -588,7 +593,7 @@ class Requests(commands.Cog,
         await ctx.message.delete()
 
     @commands.command(name="unrelease",
-                      description="Unrelease a mod request",
+                      description="Unrelease a mod request, remove release link and status",
                       usage="{prfx}unrelease [ id ]",
                       help="id: the id of the request to unrelease (required)",
                       aliases=["takedown"])
@@ -670,7 +675,7 @@ class Requests(commands.Cog,
         await ctx.message.delete()
 
     @commands.command(name="link",
-                      description="Link a mod request",
+                      description="Link a mod request, mark as Already Exists",
                       usage="{prfx}link [ id ] [ link ]",
                       help="id: the id of the request to link (required)\n"
                            "link: the link to the released mod (required)",
@@ -766,7 +771,7 @@ class Requests(commands.Cog,
         await ctx.message.delete()
 
     @commands.command(name="unlink",
-                      description="Unlink a mod request",
+                      description="Unlink a mod request, remove Already Exists status and link",
                       usage="{prfx}unlink [ id ]",
                       help="id: the id of the request to unlink (required)",
                       aliases=[])
@@ -856,8 +861,8 @@ async def tick_cooldowns():
     while True:
         await asyncio.sleep(5)
         to_remove = []
-        for user_id in cooldowns:
-            if cooldowns[user_id] < time.time():
+        for user_id, user_cooldown in cooldowns.items():
+            if user_cooldown < time.time():
                 to_remove.append(user_id)
         for user_id in to_remove:
             del cooldowns[user_id]
