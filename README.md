@@ -6,6 +6,7 @@ Custom Discord bot for Modding Haven.
    - Level
    - Cred
    - Assistance
+ - Auto-role system for Role Icons and Server Level.
  - Reputation command
  - Daily reward
  - Mod requests system
@@ -16,7 +17,6 @@ Custom Discord bot for Modding Haven.
 
 ## To Do:
  - Add blue herb command.
- - Auto-Role System.
 
 ## Credits:
 WillyJL#3633 for his amazing coding skills.
