@@ -272,7 +272,7 @@ class Levelling(commands.Cog,
                                 description="```asciidoc\n" + "\n".join(lines) + "\n```")
 
     @commands.command(name="rep",
-                      description="Gift a cool person some reputation (500 cred XP)\n"
+                      description="Gift a cool person some reputation (1000 cred XP)\n"
                                   "Only once every 24 hours (or sooner if the bot restarts)",
                       usage="{prfx}rep [ user ]",
                       help="user: the user to give rep to (ping, name, id) (required)",
@@ -320,7 +320,7 @@ class Levelling(commands.Cog,
                                                 f"You'll be able to use it again in roughly **{utils.time_to_restart()}**")
 
     @commands.command(name="daily",
-                      description="Claim your daily reward (500 level XP)\n"
+                      description="Claim your daily reward (1000 level XP)\n"
                                   "Only once every 24 hours (or sooner if the bot restarts)",
                       usage="{prfx}daily",
                       help="",
