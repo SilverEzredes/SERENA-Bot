@@ -16,7 +16,7 @@ Custom Discord bot for Modding Haven.
  - Join message
 
 ## To Do:
- - IDK
+ - Moderation Tools
 
 ## Credits:
 WillyJL#3633 for his amazing coding skills.
