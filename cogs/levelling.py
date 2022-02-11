@@ -100,7 +100,7 @@ class Levelling(commands.Cog,
                     img.paste(globals.shards_red,    (x, 194,), globals.shards_red   )
                 else:
                     img.paste(globals.shards_orange, (x, 194,), globals.shards_orange)
-            x += 28
+            x += 32
         # Draw single level values
         if target.id == globals.ADMIN_ID:
             utils.draw_text(draw, globals.font16, f"LVL:",            "#FFFFFF", (275, 425,), 999)
