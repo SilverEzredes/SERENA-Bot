@@ -80,6 +80,17 @@ class Bot(commands.Cog,
                                 description=desc)
         return
 
+    @commands.command(name="reframework",
+                      description="Up, Up, Down, Down, Left, Right, Left, Right, B, A",
+                      usage="{prfx}reframework",
+                      help="",
+                      aliases=["ref"])
+    async def reframework(self, ctx):
+        await utils.embed_reply(ctx,
+                                title="REFramework",
+                                thumbnail=globals.bot.user.avatar_url)
+        return
+
     @commands.command(name="info",
                       description="Show info and details about the bot",
                       usage="{prfx}info",
