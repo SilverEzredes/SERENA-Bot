@@ -101,6 +101,17 @@ class Bot(commands.Cog,
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
 
+    @commands.command(name="REFramework",
+                      description="Borpa and even more Borpas from the Upside Down.",
+                      usage="{prfx}REF",
+                      help="Up, Up, Down, Down, Left, Right, Left, Right, B, A",
+                      aliases=["REF"])
+    async def info(self, ctx):
+        await utils.embed_reply(ctx,
+                                title="REFramework",
+                                desc = "https://github.com/praydog/REFramework-nightly/releases"                                                                                                                                          True],
+                                thumbnail=globals.bot.user.avatar_url)
+
 
 def setup(bot):
     bot.add_cog(Bot(bot))
