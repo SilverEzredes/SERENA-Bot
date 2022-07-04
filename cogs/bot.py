@@ -80,7 +80,7 @@ class Bot(commands.Cog,
                                 description=desc)
         return
 
-    @commands.command(name="reframework",
+   @commands.command(name="reframework",
                       description="Up, Up, Down, Down, Left, Right, Left, Right, B, A",
                       usage="{prfx}reframework",
                       help="",
@@ -89,10 +89,10 @@ class Bot(commands.Cog,
         await utils.embed_reply(ctx,
                                 title="REFramework",
 				fields=[
-				["🖥️ GitHub:",           "[REFramework](https://github.com/praydog/REFramework-nightly/releases)",	True],
-				["👨‍💻 Developer",        "Praydog",	True],                                    
-                              ],    
-                              thumbnail=globals.bot.user.avatar_url)
+					["🖥️ GitHub:",           "[REFramework](https://github.com/praydog/REFramework-nightly/releases)",                                                                                                                                          True],
+                                	["👨‍💻 Developer",        "Praydog",                                                                                                                                          True],
+								],    
+                                thumbnail=globals.bot.user.avatar_url)
 	return
 
     @commands.command(name="info",
