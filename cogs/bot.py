@@ -100,6 +100,7 @@ class Bot(commands.Cog,
                                     ["📦 Version",          f"{os.environ.get('HEROKU_RELEASE_VERSION') if os.environ.get('HEROKU_RELEASE_VERSION') else 'N/A'}",                                                                  True],
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
+          return
 
     @commands.command(name="REFramework",
                       description="Borpa and even more Borpas from the Upside Down.",
