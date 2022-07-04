@@ -88,11 +88,11 @@ class Bot(commands.Cog,
     async def reframework(self, ctx):
         await utils.embed_reply(ctx,
                                 title="REFramework",
-			  fields=[
-			  ["🖥️ GitHub:",           "[REFramework](https://github.com/praydog/REFramework-nightly/releases)",                                                                                                                                          True],
-			  ["👨‍💻 Developer",        "Praydog",                                                                                                                                                                                                          True],
-                               ],    
-                               thumbnail=globals.bot.user.avatar_url)
+				fields=[
+				["🖥️ GitHub:",           "[REFramework](https://github.com/praydog/REFramework-nightly/releases)",	True],
+				["👨‍💻 Developer",        "Praydog",	True],                                    
+                              ],    
+                              thumbnail=globals.bot.user.avatar_url)
 	return
 
     @commands.command(name="info",
