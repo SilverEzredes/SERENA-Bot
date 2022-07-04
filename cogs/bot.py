@@ -80,12 +80,12 @@ class Bot(commands.Cog,
                                 description=desc)
         return
 
-          @commands.command(name="REF",
+    @commands.command(name="reframework",
                       description="Up, Up, Down, Down, Left, Right, Left, Right, B, A",
-                      usage="{prfx}REF",
+                      usage="{prfx}ref",
                       help="",
                       aliases=["ref"])
-    async def REF(self, ctx):
+    async def reframework(self, ctx):
         await utils.embed_reply(ctx,
                                 title="REF",
                                 fields=[
