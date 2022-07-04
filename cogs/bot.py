@@ -88,7 +88,10 @@ class Bot(commands.Cog,
     async def info(self, ctx):
         await utils.embed_reply(ctx,
                                 title="REF",
-                                thumbnail=globals.bot.user.avatar_url)
+                                fields=[
+                                    ["♾️ Uptime:",          f"{utils.time_from_start()}",                                                                                                                                          True],
+                                ],  
+                              thumbnail=globals.bot.user.avatar_url)
         return      
 
     @commands.command(name="info",
