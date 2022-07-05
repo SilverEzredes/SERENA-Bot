@@ -24,9 +24,9 @@ class REtools(commands.Cog,
                                 title="REFramework",
                                 description=desc,
                                 fields=[
-                                    ["🔗 Link:",          "[REFramework - GitHub](https://github.com/praydog/REFramework-nightly/releases)",                                                                                                                                          True],
-                                    ["💻 Developer", "Praydog",                                                                                                                                          True],
-                                    ["📖 More Info:",       "[REF - GitBook](https://cursey.github.io/reframework-book/)",                                                                                                                                           True],
+                                    ["🔗 Link:",          "[REFramework - GitHub](https://github.com/praydog/REFramework-nightly/releases)",   True],
+                                    ["💻 Developer", "Praydog",   True],
+                                    ["📖 More Info:",       "[REF - GitBook](https://cursey.github.io/reframework-book/)",   True],
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
 
@@ -41,8 +41,8 @@ class REtools(commands.Cog,
                                 title="Noesis Plugin - REEM Noesis CMD",
                                 description=desc,
                                 fields=[
-                                    ["🔗 Link:",          "[Noesis Plugin - GitHub](https://github.com/alphazolam/fmt_RE_MESH-Noesis-Plugin)",                                                                                                                                          True],
-                                    ["💻 Developer", "alphaZomega",                                                                                                                                          True],
+                                    ["🔗 Link:",          "[Noesis Plugin - GitHub](https://github.com/alphazolam/fmt_RE_MESH-Noesis-Plugin)",   True],
+                                    ["💻 Developer", "alphaZomega",   True],
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
 
@@ -57,8 +57,8 @@ class REtools(commands.Cog,
                                 title="REtool",
                                 description=desc,
                                 fields=[
-                                    ["🔗 Link:",          "[REtool](https://residentevilmodding.boards.net/thread/10567/pak-tex-editing-tool)",                                                                                                                                          True],
-                                    ["💻 Developer", "FluffyQuack",                                                                                                                                          True],
+                                    ["🔗 Link:",          "[REtool](https://residentevilmodding.boards.net/thread/10567/pak-tex-editing-tool)",   True],
+                                    ["💻 Developer", "FluffyQuack",   True],
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
 
@@ -73,8 +73,8 @@ class REtools(commands.Cog,
                                 title="Fluffy Mod Manager 5000",
                                 description=desc,
                                 fields=[
-                                    ["🔗 Link:",          "[Fluffy Mod Manager](https://www.fluffyquack.com/)",                                                                                                                                          True],
-                                    ["💻 Developer", "FluffyQuack",                                                                                                                                          True],
+                                    ["🔗 Link:",          "[Fluffy Mod Manager](https://www.fluffyquack.com/)",   True],
+                                    ["💻 Developer", "FluffyQuack",   True],
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
 
@@ -89,9 +89,9 @@ class REtools(commands.Cog,
                                 title="RE RSZ",
                                 description=desc,
                                 fields=[
-                                    ["🔗 Link:",          "[RE RSZ - GitHub](https://www.fluffyquack.com/)",                                                                                                                                          True],
-                                    ["💻 Developer", "alphaZomega",                                                                                                                                          True],
-                                    ["📖 More Info:",       "[RE RSZ - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932644761028939816)",                                                                                                                                           True]
+                                    ["🔗 Link:",          "[RE RSZ - GitHub](https://www.fluffyquack.com/)",   True],
+                                    ["💻 Developer", "alphaZomega",   True],
+                                    ["📖 More Info:",       "[RE RSZ - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932644761028939816)",   True]
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
 
@@ -106,8 +106,8 @@ class REtools(commands.Cog,
                                 title="3DSmax MESH Script - RE-ENGINE MESH TOOL",
                                 description=desc,
                                 fields=[
-                                    ["🔗 Link:",          "[3DSmax MESH - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932645540599046204)",                                                                                                                                          True],
-                                    ["💻 Developers", "Maliwei777, alphaZomega, MarioKart64n, Shigu and others",                                                                                                                                          True],
+                                    ["🔗 Link:",          "[3DSmax MESH - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932645540599046204)",   True],
+                                    ["💻 Developers", "Maliwei777, alphaZomega, MarioKart64n, Shigu and others",   True],
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
 
@@ -122,8 +122,8 @@ class REtools(commands.Cog,
                                 title="alphaZomega Tool",
                                 description=desc,
                                 fields=[
-                                    ["🔗 Link:",          "[alphaZomega Tool - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932645657364287519)",                                                                                                                                          True],
-                                    ["💻 Developer", "alphaZomega",                                                                                                                                          True],
+                                    ["🔗 Link:",          "[alphaZomega Tool - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932645657364287519)",   True
+                                    ["💻 Developer", "alphaZomega",   True],
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
 
@@ -138,8 +138,8 @@ class REtools(commands.Cog,
                                 title="ResetMesh",
                                 description=desc,
                                 fields=[
-                                    ["🔗 Link:",          "[ResetMesh - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932645788826353705)",                                                                                                                                          True],
-                                    ["💻 Developer", "alphaZomega",                                                                                                                                          True],
+                                    ["🔗 Link:",          "[ResetMesh - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932645788826353705)",   True],
+                                    ["💻 Developer", "alphaZomega",   True],
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
 
