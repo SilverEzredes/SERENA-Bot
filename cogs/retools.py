@@ -15,7 +15,7 @@ class REtools(commands.Cog,
 
     @commands.command(name="REFramework",
                       description="",
-                      usage="{prfx}REFramework",
+                      usage="{prfx}reframework",
                       help="",
                       aliases=["ref"])
     async def reframework(self, ctx):
@@ -31,11 +31,11 @@ class REtools(commands.Cog,
 
     @commands.command(name="Noesis Plugin",
                       description="",
-                      usage="{prfx}REEM",
+                      usage="{prfx}noesis",
                       help="",
-                      aliases=["Noesis", "MaxScript", "MS", "Plugin", "fmt", "REmesh"])
+                      aliases=["reem", "MaxScript", "MS", "Plugin", "fmt", "REmesh"])
     async def noesisplugin(self, ctx):
-        desc = "A plugin for Rich Whitehouse's Noesis to import and export RE Engine Meshes and Textures."
+        desc = "A plugin for Rich Whitehouse's Noesis to import and export\n RE Engine Meshes and Textures."
         await utils.embed_reply(ctx,
                                 title="Noesis Plugin - REEM Noesis CMD",
                                 description=desc,
