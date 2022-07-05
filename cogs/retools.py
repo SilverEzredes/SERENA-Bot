@@ -131,7 +131,7 @@ class REtools(commands.Cog,
                       description="",
                       usage="{prfx}resetmesh",
                       help="",
-                      aliases=["3dsreset", "MaxScriptReset", "MSreset"])
+                      aliases=["3dsreset", "MaxScriptReset", "MSreset", "reset"])
     async def ResetMesh(self, ctx):
         desc = "ResetMesh is an older 3dsmax script Alpha made to fix broken meshing without needing to re-import the mesh through Noesis."
         await utils.embed_reply(ctx,
@@ -154,9 +154,9 @@ class REtools(commands.Cog,
                                 title="Alpha's Offset Fixer",
                                 description=desc,
                                 fields=[
-                                    ["🔗 Link:",          "[Alpha's Offset Fixer - GitHub](https://github.com/alphazolam/Alpha-Offset-Fixer)",                                                                                                                                          True],
-                                    ["💻 Developer", "alphaZomega",                                                                                                                                          True],
-                                    ["📖 More Info:",       "[Offset Fixer - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932646362795868240)",                                                                                                                                           True],
+                                    ["🔗 Link:",          "[Alpha's Offset Fixer - GitHub](https://github.com/alphazolam/Alpha-Offset-Fixer)",   True],
+                                    ["💻 Developer", "alphaZomega",   True],
+                                    ["📖 More Info:",       "[Offset Fixer - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932646362795868240)",   True],
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
 
