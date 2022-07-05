@@ -89,7 +89,7 @@ class REtools(commands.Cog,
                                 title="RE RSZ",
                                 description=desc,
                                 fields=[
-                                    ["🔗 Link:",          "[RE RSZ - GitHub](https://www.fluffyquack.com/)",                                                                                                                                          True],
+                                    ["🔗 Link:",          "[RE RSZ - GitHub](https://github.com/alphazolam/RE_RSZ)",                                                                                                                                          True],
                                     ["💻 Developer", "alphaZomega",                                                                                                                                          True],
                                     ["📖 More Info:",       "[RE RSZ - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932644761028939816)",                                                                                                                                           True]
                                 ],
