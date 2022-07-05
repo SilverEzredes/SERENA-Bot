@@ -33,7 +33,7 @@ class REtools(commands.Cog,
                       description="",
                       usage="{prfx}noesisplugin",
                       help="",
-                      aliases=["noesis", "reem", "MaxScript", "MS", "Plugin", "fmt", "REmesh"])
+                      aliases=["noesis", "reem", "Plugin", "fmt", "fmtREmesh"])
     async def noesisplugin(self, ctx):
         desc = "A plugin for Rich Whitehouse's Noesis to import and export\n RE Engine Meshes and Textures."
         await utils.embed_reply(ctx,
@@ -44,5 +44,39 @@ class REtools(commands.Cog,
                                     ["💻 Developer", "alphaZomega",                                                                                                                                          True],
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
+
+    @commands.command(name="REtool",
+                      description="",
+                      usage="{prfx}retool",
+                      help="",
+                      aliases=["unpak"])
+    async def retool(self, ctx):
+        desc = "A tool used for extracting the embedded game files from every RE Engine game's PAK files."
+        await utils.embed_reply(ctx,
+                                title="REtool",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[REtool](https://residentevilmodding.boards.net/thread/10567/pak-tex-editing-tool)",                                                                                                                                          True],
+                                    ["💻 Developer", "FluffyQuack",                                                                                                                                          True],
+                                ],
+                                thumbnail=globals.bot.user.avatar_url)
+
+    @commands.command(name="FluffyModManager",
+                      description="",
+                      usage="{prfx}fluffymodmanager",
+                      help="",
+                      aliases=["fmm", "modmanager", "fluffy", "sockpuppet"])
+    async def fluffymodmanager(self, ctx):
+        desc = "Fluffy Manager 5000 lets you manage mods for various titles, such as most Resident Evil titles, Devil May Cry 5, SoulCalibur VI, and more."
+        await utils.embed_reply(ctx,
+                                title="Fluffy Mod Manager 500",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[Fluffy Mod Manager](https://www.fluffyquack.com/)",                                                                                                                                          True],
+                                    ["💻 Developer", "FluffyQuack",                                                                                                                                          True],
+                                ],
+                                thumbnail=globals.bot.user.avatar_url)
+
+
 def setup(bot):
     bot.add_cog(REtools(bot))
