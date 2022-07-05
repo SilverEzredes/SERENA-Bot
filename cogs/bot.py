@@ -89,7 +89,7 @@ class Bot(commands.Cog,
         desc = "A mod framework, scripting platform, and modding tool for RE Engine games.\n"
         await utils.embed_reply(ctx,
                                 title="REFramework",
-                                description=desc
+                                description=desc,
                                 fields=[
                                     ["🔗 Link:",          "[REFramework - GitHub](https://github.com/praydog/REFramework-nightly/releases)",                                                                                                                                          True],
                                     ["‍💻 Developer",      "Praydog",                                                                                                                                          True],
