@@ -9,7 +9,7 @@ from modules import globals, utils
 
 
 class Bot(commands.Cog,
-          description="Commands regarding the bot instance"):
+          description="Commands RE Engine Tools"):
     def __init__(self, bot):
         self.bot = bot
 
