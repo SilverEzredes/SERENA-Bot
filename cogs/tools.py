@@ -8,8 +8,8 @@ import os
 from modules import globals, utils
 
 
-class Bot(commands.Cog,
-          description="Commands RE Engine Tools"):
+class Tools(commands.Cog,
+          description="Commands for RE Engine Tools"):
     def __init__(self, bot):
         self.bot = bot
 
