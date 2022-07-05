@@ -90,7 +90,6 @@ class Bot(commands.Cog,
                                 title="REFramework",
                                 fields=[
                                     ["🖋 About:",          "A mod framework, scripting platform, and modding tool for RE Engine games.\n",                                   True],
-                                    ["",   "", True],
                                     ["🔗 Link:",          "[REFramework - GitHub](https://github.com/praydog/REFramework-nightly/releases)",                                                                                                                                          True],
                                     ["‍💻 Developer",      "Praydog",                                                                                                                                          True],
                                 ],
