@@ -29,5 +29,6 @@ class REtools(commands.Cog,
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
 
+          
 def setup(bot):
     bot.add_cog(REtools(bot))
