@@ -81,16 +81,17 @@ class Bot(commands.Cog,
         return
 
     @commands.command(name="reframework",
-                      description="A mod framework, scripting platform, and modding tool for RE Engine games.",
+                      description="",
                       usage="{prfx}reframework",
-                      help="A mod framework, scripting platform, and modding tool for RE Engine games.",
+                      help="",
                       aliases=["ref"])
     async def reframework(self, ctx):
         await utils.embed_reply(ctx,
                                 title="REFramework",
+                                description="A mod framework, scripting platform, and modding tool for RE Engine games."
                                 fields=[
-                                    ["🔗 Link:",          "[REFramework-GitHub](https://github.com/praydog/REFramework-nightly/releases)",                                                                                                                                          True],
-                                    ["‍💻 Developer", "Praydog",                                                                                                                                          True],
+                                    ["🔗 Link:",          "[REFramework - GitHub](https://github.com/praydog/REFramework-nightly/releases)",                                                                                                                                          True],
+                                    ["‍💻 Developer",      "Praydog",                                                                                                                                          True],
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
         return
