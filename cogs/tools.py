@@ -31,4 +31,4 @@ class Tools(commands.Cog,
 
 
 def setup(bot):
-    bot.add_cog(Bot(bot))
+    bot.add_cog(Tools(bot))
