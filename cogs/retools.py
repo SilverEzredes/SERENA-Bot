@@ -117,7 +117,7 @@ class REtools(commands.Cog,
                       help="",
                       aliases=["3dsalpha", "MaxScriptAlpha", "MSalpha", "alphaZtool", "AZT"])
     async def alphaZtool(self, ctx):
-        desc = "Alpha's self-named Maxscript tool for 3DSmax is a kind of multi-tool used for various mesh-modding related tasks."
+        desc = "Alpha's Maxscript tool for 3DSmax is a kind of multi-tool used for various mesh-modding related tasks."
         await utils.embed_reply(ctx,
                                 title="alphaZomega Tool",
                                 description=desc,
