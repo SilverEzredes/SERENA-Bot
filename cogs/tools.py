@@ -1,8 +1,6 @@
 from discord.ext import commands
-import datetime
+from typing import Union
 import discord
-import psutil
-import os
 
 # Local imports
 from modules import globals, utils
