@@ -26,6 +26,7 @@ class REtools(commands.Cog,
                                 fields=[
                                     ["🔗 Link:",          "[REFramework - GitHub](https://github.com/praydog/REFramework-nightly/releases)",                                                                                                                                          True],
                                     ["💻 Developer", "Praydog",                                                                                                                                          True],
+                                    ["📖 More Info:",       "[REF - GitBook](https://cursey.github.io/reframework-book/)",                                                                                                                                           True],
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
 
@@ -33,7 +34,7 @@ class REtools(commands.Cog,
                       description="",
                       usage="{prfx}noesisplugin",
                       help="",
-                      aliases=["noesis", "reem", "Plugin", "fmt", "fmtREmesh"])
+                      aliases=["noesis", "reem", "Plugin", "fmt", "fmtREmesh", "newMS"])
     async def noesisplugin(self, ctx):
         desc = "A plugin for Rich Whitehouse's Noesis to import and export\n RE Engine Meshes and Textures."
         await utils.embed_reply(ctx,
@@ -91,6 +92,38 @@ class REtools(commands.Cog,
                                     ["🔗 Link:",          "[RE RSZ - GitHub](https://www.fluffyquack.com/)",                                                                                                                                          True],
                                     ["💻 Developer", "alphaZomega",                                                                                                                                          True],
                                     ["📖 More Info:",       "[RE RSZ - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932644761028939816)",                                                                                                                                           True]
+                                ],
+                                thumbnail=globals.bot.user.avatar_url)
+
+    @commands.command(name="3DSmax_RE-Engine_Mesh_Tool",
+                      description="",
+                      usage="{prfx}re_3dsmaxMesh",
+                      help="",
+                      aliases=["3ds", "3dsmesh", "MaxScript", "ogMS"])
+    async def re_3dsmaxMesh(self, ctx):
+        desc = "The original Maxscript created for importing and modifying\n RE2 mesh files, now works for all RE Engine games."
+        await utils.embed_reply(ctx,
+                                title="3DSmax MESH Script - RE-ENGINE MESH TOOL",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[3DSmax MESH - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932645540599046204)",                                                                                                                                          True],
+                                    ["💻 Developers", "Maliwei777, alphaZomega, MarioKart64n, Shigu and others",                                                                                                                                          True],
+                                ],
+                                thumbnail=globals.bot.user.avatar_url)
+
+    @commands.command(name="alphaZomega_Tool",
+                      description="",
+                      usage="{prfx}alphaZtool",
+                      help="",
+                      aliases=["3dsalpha", "MaxScriptAlpha", "MSalpha", "alphaZtool", "AZT"])
+    async def alphaZtool(self, ctx):
+        desc = "Alpha's self-named Maxscript tool for 3DSmax is a kind of multi-tool used for various mesh-modding related tasks."
+        await utils.embed_reply(ctx,
+                                title="alphaZomega Tool",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[alphaZomega Tool - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932645657364287519)",                                                                                                                                          True],
+                                    ["💻 Developer", "alphaZomega",                                                                                                                                          True],
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
 
