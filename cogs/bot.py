@@ -80,6 +80,21 @@ class Bot(commands.Cog,
                                 description=desc)
         return
 
+    @commands.command(name="reframework",
+                      description="",
+                      usage="{prfx}reframework",
+                      help="",
+                      aliases=["ref"])
+    async def reframework(self, ctx):
+        await utils.embed_reply(ctx,
+                                title="REFramework",
+                                fields=[
+                                    ["Link:",          "[Github](https://github.com/praydog/REFramework-nightly/releases)",                                                                                                                                          True],
+                                    ["‍💻 Developer", "Praydog",                                                                                                                                          True],
+                                ],
+                                thumbnail=globals.bot.user.avatar_url)
+        return
+
     @commands.command(name="info",
                       description="Show info and details about the bot",
                       usage="{prfx}info",
