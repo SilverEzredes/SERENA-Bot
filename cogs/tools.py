@@ -30,6 +30,5 @@ class Bot(commands.Cog,
                                 thumbnail=globals.bot.user.avatar_url)
         return
 
-
 def setup(bot):
     bot.add_cog(Bot(bot))
