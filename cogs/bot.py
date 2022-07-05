@@ -95,6 +95,21 @@ class Bot(commands.Cog,
                                 thumbnail=globals.bot.user.avatar_url)
         return
 
+    @commands.command(name="NoesisPlugin",
+                      description="",
+                      usage="{prfx}NoesisPlugin",
+                      help="",
+                      aliases=["noesis", "fmt_RE_MESH", "REmesh"])
+    async def NoesisPlugin(self, ctx):
+        await utils.embed_reply(ctx,
+                                title="Noesis Plugin --  fmt_RE_MESH.py",
+                                fields=[
+                                    ["Link:",          "[Noesis Plugin - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932645164839759932)",                                                                                                                                          True],
+                                    ["‍💻 Developer", "alphaZomega",                                                                                                                                          True],
+                                ],
+                                thumbnail=globals.bot.user.avatar_url)
+        return
+
     @commands.command(name="info",
                       description="Show info and details about the bot",
                       usage="{prfx}info",
