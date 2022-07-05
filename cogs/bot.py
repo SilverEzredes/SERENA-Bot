@@ -86,8 +86,10 @@ class Bot(commands.Cog,
                       help="",
                       aliases=["ref"])
     async def reframework(self, ctx):
+        desc = "A mod framework, scripting platform, and modding tool for RE Engine games.\n"
         await utils.embed_reply(ctx,
-                                title="REFramework\n 🖋 About: A mod framework, scripting platform, and modding tool for RE Engine games.\n",
+                                title="REFramework",
+                                description=desc
                                 fields=[
                                     ["🔗 Link:",          "[REFramework - GitHub](https://github.com/praydog/REFramework-nightly/releases)",                                                                                                                                          True],
                                     ["‍💻 Developer",      "Praydog",                                                                                                                                          True],
