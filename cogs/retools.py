@@ -1,7 +1,6 @@
 from discord.ext import commands
-from typing import Union
-import discord
 import datetime
+import discord
 import psutil
 import os
 
@@ -29,7 +28,6 @@ class REtools(commands.Cog,
                                     ["‍💻 Developer",      "Praydog",                                                                                                                                          True],
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
-          return
 
 def setup(bot):
     bot.add_cog(REtools(bot))
