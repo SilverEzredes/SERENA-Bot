@@ -23,10 +23,6 @@ class Tools(commands.Cog,
         await utils.embed_reply(ctx,
                                 title="REFramework",
                                 description=desc
-                                fields=[
-                                    ["🔗 Link:",          "[REFramework - GitHub](https://github.com/praydog/REFramework-nightly/releases)",                                                                                                                                          True],
-                                    ["‍💻 Developer",      "Praydog",                                                                                                                                          True],
-                                ],
                                 thumbnail=globals.bot.user.avatar_url)
 
 
