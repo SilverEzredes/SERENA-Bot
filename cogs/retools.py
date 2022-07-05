@@ -1,14 +1,12 @@
 from discord.ext import commands
-import datetime
+from typing import Union
 import discord
-import psutil
-import os
 
 # Local imports
 from modules import globals, utils
 
 
-class REtools(commands.Cog,
+class Tools(commands.Cog,
           description="Commands for RE Engine Tools"):
     def __init__(self, bot):
         self.bot = bot
@@ -24,11 +22,11 @@ class REtools(commands.Cog,
                                 title="REFramework",
                                 description=desc
                                 fields=[
-                                    ["🔗 Link:",          "[REFramework - GitHub](https://github.com/praydog/REFramework-nightly/releases)",                                                                  True],
+                                    ["🔗 Link:",          "[REFramework - GitHub](https://github.com/praydog/REFramework-nightly/releases)",                                                                                                                                          True],
                                     ["‍💻 Developer",      "Praydog",                                                                                                                                          True],
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
 
-          
+
 def setup(bot):
-    bot.add_cog(REtools(bot))
+    bot.add_cog(Tools(bot))
