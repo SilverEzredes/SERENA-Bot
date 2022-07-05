@@ -23,7 +23,7 @@ class Tools(commands.Cog,
         await utils.embed_reply(ctx,
                                 title="REFramework",
                                 description=desc
-                                thumbnail=globals.bot.user.avatar_url)
+                                thumbnail=globals.bot.user.avatar_url),
 
 
 def setup(bot):
