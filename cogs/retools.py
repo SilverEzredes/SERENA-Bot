@@ -44,7 +44,7 @@ class REtools(commands.Cog,
                                     ["🔗 Link:",          "[Noesis Plugin - GitHub](https://github.com/alphazolam/fmt_RE_MESH-Noesis-Plugin)",                                                                                                                                          True],
                                     ["💻 Developer", "alphaZomega",                                                                                                                                          True],
                                 ],
-                                thumbnail=globals.bot.user.default_avatar)
+                                thumbnail=globals.bot.user.avatar_url)
 
     @commands.command(name="REtool",
                       description="",
