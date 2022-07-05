@@ -28,7 +28,7 @@ class Bot(commands.Cog,
                                     ["‍💻 Developer",      "Praydog",                                                                                                                                          True],
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
-        return
+
 
 def setup(bot):
     bot.add_cog(Bot(bot))
