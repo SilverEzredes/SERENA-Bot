@@ -88,6 +88,7 @@ class Bot(commands.Cog,
     async def reframework(self, ctx):
         await utils.embed_reply(ctx,
                                 title="REFramework",
+                                desc = "borpa"
                                 fields=[
                                     ["🖋 About:",          "A mod framework, scripting platform, and modding tool for RE Engine games.\n",                                   True],
                                     ["🔗 Link:",          "[REFramework - GitHub](https://github.com/praydog/REFramework-nightly/releases)",                                                                                                                                          True],
