@@ -29,11 +29,11 @@ class REtools(commands.Cog,
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
 
-    @commands.command(name="Noesis Plugin",
+    @commands.command(name="NoesisPlugin",
                       description="",
-                      usage="{prfx}noesis",
+                      usage="{prfx}noesisplugin",
                       help="",
-                      aliases=["reem", "MaxScript", "MS", "Plugin", "fmt", "REmesh"])
+                      aliases=["noesis", "reem", "MaxScript", "MS", "Plugin", "fmt", "REmesh"])
     async def noesisplugin(self, ctx):
         desc = "A plugin for Rich Whitehouse's Noesis to import and export\n RE Engine Meshes and Textures."
         await utils.embed_reply(ctx,
