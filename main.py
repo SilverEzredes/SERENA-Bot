@@ -97,7 +97,6 @@ if __name__ == '__main__':
     globals.bot.load_extension('cogs.requests')
     globals.bot.load_extension('cogs.utilities')
     globals.bot.load_extension('cogs.staff')
-    globals.bot.load_extension('cogs.tools')
     globals.bot.load_extension('jishaku')
 
     # On ready, fires when fully connected to Discord
