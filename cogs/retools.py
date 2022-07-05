@@ -51,7 +51,7 @@ class REtools(commands.Cog,
                       help="",
                       aliases=["unpak"])
     async def retool(self, ctx):
-        desc = "A tool used for extracting the embedded game files from every RE Engine game's PAK files."
+        desc = "A tool used for extracting the embedded game files from every\n RE Engine game's PAK files."
         await utils.embed_reply(ctx,
                                 title="REtool",
                                 description=desc,
@@ -67,13 +67,30 @@ class REtools(commands.Cog,
                       help="",
                       aliases=["fmm", "modmanager", "fluffy", "sockpuppet"])
     async def fluffymodmanager(self, ctx):
-        desc = "Fluffy Manager 5000 lets you manage mods for various titles, such as most Resident Evil titles, Devil May Cry 5, SoulCalibur VI, and more."
+        desc = "Fluffy Manager 5000 lets you manage mods for various titles,\n such as most Resident Evil titles, Devil May Cry 5, SoulCalibur VI, and more."
         await utils.embed_reply(ctx,
-                                title="Fluffy Mod Manager 500",
+                                title="Fluffy Mod Manager 5000",
                                 description=desc,
                                 fields=[
                                     ["🔗 Link:",          "[Fluffy Mod Manager](https://www.fluffyquack.com/)",                                                                                                                                          True],
                                     ["💻 Developer", "FluffyQuack",                                                                                                                                          True],
+                                ],
+                                thumbnail=globals.bot.user.avatar_url)
+
+    @commands.command(name="RE_RSZ",
+                      description="",
+                      usage="{prfx}re_rsz",
+                      help="",
+                      aliases=["rsz", "HolyTemplate", "010rsz"])
+    async def re_rsz(self, ctx):
+        desc = "010 Editor Binary Template for editing RE Engine game files contiaining RSZ data."
+        await utils.embed_reply(ctx,
+                                title="RE RSZ",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[RE RSZ - GitHub](https://www.fluffyquack.com/)",                                                                                                                                          True],
+                                    ["💻 Developer", "alphaZomega",                                                                                                                                          True],
+                                    ["📖 More Info:",       "[RE RSZ - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932644761028939816)",                                                                                                                                           True]
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
 
