@@ -115,7 +115,7 @@ class REtools(commands.Cog,
                       description="",
                       usage="{prfx}alphaZtool",
                       help="",
-                      aliases=["3dsalpha", "MaxScriptAlpha", "MSalpha", "alphaZtool", "AZT"])
+                      aliases=["3dsalpha", "MaxScriptAlpha", "MSalpha", "AZT"])
     async def alphaZtool(self, ctx):
         desc = "Alpha's Maxscript tool for 3DSmax is a kind of multi-tool used for various mesh-modding related tasks."
         await utils.embed_reply(ctx,
@@ -124,6 +124,39 @@ class REtools(commands.Cog,
                                 fields=[
                                     ["🔗 Link:",          "[alphaZomega Tool - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932645657364287519)",                                                                                                                                          True],
                                     ["💻 Developer", "alphaZomega",                                                                                                                                          True],
+                                ],
+                                thumbnail=globals.bot.user.avatar_url)
+
+    @commands.command(name="ResetMesh",
+                      description="",
+                      usage="{prfx}resetmesh",
+                      help="",
+                      aliases=["3dsreset", "MaxScriptReset", "MSreset"])
+    async def ResetMesh(self, ctx):
+        desc = "ResetMesh is an older 3dsmax script Alpha made to fix broken meshing without needing to re-import the mesh through Noesis."
+        await utils.embed_reply(ctx,
+                                title="ResetMesh",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[ResetMesh - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932645788826353705)",                                                                                                                                          True],
+                                    ["💻 Developer", "alphaZomega",                                                                                                                                          True],
+                                ],
+                                thumbnail=globals.bot.user.avatar_url)
+
+    @commands.command(name="OffsetFixer",
+                      description="",
+                      usage="{prfx}offsetfixer",
+                      help="",
+                      aliases=["010offset", "offsetbt"])
+    async def OffsetFixer(self, ctx):
+        desc = "This universal script can instantly update thousands of offsets in any file."
+        await utils.embed_reply(ctx,
+                                title="Alpha's Offset Fixer",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[Alpha's Offset Fixer - GitHub](https://github.com/alphazolam/Alpha-Offset-Fixer)",                                                                                                                                          True],
+                                    ["💻 Developer", "alphaZomega",                                                                                                                                          True],
+                                    ["📖 More Info:",       "[Offset Fixer - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932646362795868240)",                                                                                                                                           True],
                                 ],
                                 thumbnail=globals.bot.user.avatar_url)
 
