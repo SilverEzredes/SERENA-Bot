@@ -28,9 +28,9 @@ class REtools(commands.Cog,
                                     ["💻 Developer", "Praydog",                                                                                                                                          True],
                                     ["📖 More Info:",       "[REF - GitBook](https://cursey.github.io/reframework-book/)",                                                                                                                                           True],
                                 ],
-                                thumbnail=globals.bot.user.avatar_url)
+                                thumbnail="https://cdn.discordapp.com/emojis/994126039246700544.png")
 
-    @commands.command(name="NoesisPlugin",
+    @commands.command(name="Noesis Plugin & REEM",
                       description="",
                       usage="{prfx}noesisplugin",
                       help="",
@@ -44,7 +44,7 @@ class REtools(commands.Cog,
                                     ["🔗 Link:",          "[Noesis Plugin - GitHub](https://github.com/alphazolam/fmt_RE_MESH-Noesis-Plugin)",                                                                                                                                          True],
                                     ["💻 Developer", "alphaZomega",                                                                                                                                          True],
                                 ],
-                                thumbnail="https://cdn.discordapp.com/emojis/903818151110770698.png")
+                                thumbnail="https://cdn.discordapp.com/emojis/994124668690767912.png")
 
     @commands.command(name="REtool",
                       description="",
@@ -60,7 +60,7 @@ class REtools(commands.Cog,
                                     ["🔗 Link:",          "[REtool](https://residentevilmodding.boards.net/thread/10567/pak-tex-editing-tool)",                                                                                                                                          True],
                                     ["💻 Developer", "FluffyQuack",                                                                                                                                          True],
                                 ],
-                                thumbnail=globals.bot.user.avatar_url)
+                                thumbnail="https://cdn.discordapp.com/emojis/994126946680176751.png")
 
     @commands.command(name="FluffyModManager",
                       description="",
@@ -76,9 +76,9 @@ class REtools(commands.Cog,
                                     ["🔗 Link:",          "[Fluffy Mod Manager](https://www.fluffyquack.com/)",                                                                                                                                          True],
                                     ["💻 Developer", "FluffyQuack",                                                                                                                                          True],
                                 ],
-                                thumbnail=globals.bot.user.avatar_url)
+                                thumbnail="https://cdn.discordapp.com/emojis/994126946680176751.png")
 
-    @commands.command(name="RE_RSZ",
+    @commands.command(name="010 - RE RSZ",
                       description="",
                       usage="{prfx}re_rsz",
                       help="",
@@ -93,9 +93,9 @@ class REtools(commands.Cog,
                                     ["💻 Developer", "alphaZomega",                                                                                                                                          True],
                                     ["📖 More Info:",       "[RE RSZ - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932644761028939816)",                                                                                                                                           True]
                                 ],
-                                thumbnail=globals.bot.user.avatar_url)
+                                thumbnail="https://cdn.discordapp.com/emojis/955607176674697276.png")
 
-    @commands.command(name="3DSmax_RE-Engine_Mesh_Tool",
+    @commands.command(name="3DSmax - RE-Engine Mesh Tool",
                       description="",
                       usage="{prfx}re_3dsmaxMesh",
                       help="",
@@ -109,9 +109,9 @@ class REtools(commands.Cog,
                                     ["🔗 Link:",          "[3DSmax MESH - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932645540599046204)",                                                                                                                                          True],
                                     ["💻 Developers", "Maliwei777, alphaZomega, MarioKart64n, Shigu and others",                                                                                                                                          True],
                                 ],
-                                thumbnail=globals.bot.user.avatar_url)
+                                thumbnail="https://cdn.discordapp.com/emojis/994125244212199424.png")
 
-    @commands.command(name="alphaZomega_Tool",
+    @commands.command(name="3DSmax - alphaZomega Tool",
                       description="",
                       usage="{prfx}alphaZtool",
                       help="",
@@ -125,9 +125,9 @@ class REtools(commands.Cog,
                                     ["🔗 Link:",          "[alphaZomega Tool - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932645657364287519)",                                                                                                                                          True],
                                     ["💻 Developer", "alphaZomega",                                                                                                                                          True],
                                 ],
-                                thumbnail=globals.bot.user.avatar_url)
+                                thumbnail="https://cdn.discordapp.com/emojis/955607176674697276.png")
 
-    @commands.command(name="ResetMesh",
+    @commands.command(name="3DSmax - ResetMesh",
                       description="",
                       usage="{prfx}resetmesh",
                       help="",
@@ -141,9 +141,9 @@ class REtools(commands.Cog,
                                     ["🔗 Link:",          "[ResetMesh - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932645788826353705)",                                                                                                                                          True],
                                     ["💻 Developer", "alphaZomega",                                                                                                                                          True],
                                 ],
-                                thumbnail=globals.bot.user.avatar_url)
+                                thumbnail="https://cdn.discordapp.com/emojis/955607176674697276.png")
 
-    @commands.command(name="OffsetFixer",
+    @commands.command(name="010 - Offset Fixer",
                       description="",
                       usage="{prfx}offsetfixer",
                       help="",
@@ -158,7 +158,7 @@ class REtools(commands.Cog,
                                     ["💻 Developer", "alphaZomega",                                                                                                                                          True],
                                     ["📖 More Info:",       "[Offset Fixer - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932646362795868240)",                                                                                                                                           True],
                                 ],
-                                thumbnail=globals.bot.user.avatar_url)
+                                thumbnail="https://cdn.discordapp.com/emojis/955607176674697276.png")
 
 
 def setup(bot):
