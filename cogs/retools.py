@@ -256,6 +256,201 @@ class REtools(commands.Cog,
                                 ],
                                 thumbnail="https://cdn.discordapp.com/emojis/955607176674697276.png")
 
+    @commands.command(name="010--GPUC",
+                      description="",
+                      usage="{prfx}GPUCTemp",
+                      help="",
+                      aliases=["010gpuc", "gpucbt"])
+    async def GPUCTemplate(self, ctx):
+        desc = "The GPUC template for 010 lets you edit the properties of physics cloth files."
+        await utils.embed_reply(ctx,
+                                title="GPUC Template",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[GPUC Template - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932648669956681739)",                                                                                                                                          True],
+                                    ["💻 Developer", "alphaZomega",                                                                                                                                          True],
+                                ],
+                                thumbnail="https://cdn.discordapp.com/emojis/955607176674697276.png")
+
+    @commands.command(name="010--CLIP-TML",
+                      description="",
+                      usage="{prfx}CLIP-TMLTemp",
+                      help="",
+                      aliases=["010clip", "010tml", "tmlbt", "clipbt"])
+    async def CLIPTMLTemplate(self, ctx):
+        desc = "The TML template edits RE engine timeline files (tml and clip)."
+        await utils.embed_reply(ctx,
+                                title="CLIP-TML Template",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[CLIP-TML Template - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932648812596588594)",                                                                                                                                          True],
+                                    ["💻 Developer", "alphaZomega",                                                                                                                                          True],
+                                ],
+                                thumbnail="https://cdn.discordapp.com/emojis/955607176674697276.png")
+
+    @commands.command(name="010--GUI",
+                      description="",
+                      usage="{prfx}GUITemp",
+                      help="",
+                      aliases=["010gui", "guibt"])
+    async def GUITemplate(self, ctx):
+        desc = "The GUI template can show you the properties of gui Graphical User Interface files."
+        await utils.embed_reply(ctx,
+                                title="GUI Template",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[GUI Template - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932648939541389352)",                                                                                                                                          True],
+                                    ["💻 Developer", "alphaZomega",                                                                                                                                          True],
+                                ],
+                                thumbnail="https://cdn.discordapp.com/emojis/955607176674697276.png")
+
+    @commands.command(name="010--FBXskel",
+                      description="",
+                      usage="{prfx}FBXskelTemp",
+                      help="",
+                      aliases=["010fbx", "fbxbt", "010skel", "skelbt"])
+    async def FBXskelTemplate(self, ctx):
+        desc = "The fbxskel template is used for editing fbxskel skeleton files from all RE Engine games."
+        await utils.embed_reply(ctx,
+                                title="FBXskel Template",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[FBXskel Template - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932649195674935336)",                                                                                                                                          True],
+                                    ["💻 Developers", "che, alphaZomega",                                                                                                                                          True],
+                                ],
+                                thumbnail="https://cdn.discordapp.com/emojis/955607176674697276.png")
+
+    @commands.command(name="010--TEX",
+                      description="",
+                      usage="{prfx}TEXTemp",
+                      help="",
+                      aliases=["010tex", "texbt"])
+    async def TEXTemplate(self, ctx):
+        desc = "The TEX template shows how the RE Engine tex texture format works."
+        await utils.embed_reply(ctx,
+                                title="TEX Template",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[TEX Template - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932649305536364635)",                                                                                                                                          True],
+                                    ["💻 Developers", "che, alphaZomega",                                                                                                                                          True],
+                                ],
+                                thumbnail="https://cdn.discordapp.com/emojis/955607176674697276.png")
+
+    @commands.command(name="010--EFX",
+                      description="",
+                      usage="{prfx}EFXTemp",
+                      help="",
+                      aliases=["010efx", "efxbt", "010fx", "fxbt"])
+    async def EFXTemplate(self, ctx):
+        desc = "The EFX template lets you change effects in RE Engine EFX files."
+        await utils.embed_reply(ctx,
+                                title="EFX Template",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[EFX Template - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932649426328125500)",                                                                                                                                          True],
+                                    ["💻 Developer", "Darkness",                                                                                                                                          True],
+                                ],
+                                thumbnail="https://cdn.discordapp.com/emojis/955607176674697276.png")
+
+    @commands.command(name="010--UVAR",
+                      description="",
+                      usage="{prfx}UVARTemp",
+                      help="",
+                      aliases=["010uvar", "uvarbt"])
+    async def UVARTemplate(self, ctx):
+        desc = "The UVAR template allows you to edit uvar 'uvariables' files from all RE Engine games."
+        await utils.embed_reply(ctx,
+                                title="UVAR Template",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[UVAR Template - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932650247312769094)",                                                                                                                                          True],
+                                    ["💻 Developer", "alphaZomega",                                                                                                                                          True],
+                                ],
+                                thumbnail="https://cdn.discordapp.com/emojis/955607176674697276.png")
+
+    @commands.command(name="MDF-Manager",
+                      description="",
+                      usage="{prfx}MDFManager",
+                      help="",
+                      aliases=["MDF", "MDFtool"])
+    async def MDFManager(self, ctx):
+        desc = "MDF Manager is a great tool for editing material files in all RE Engine games."
+        await utils.embed_reply(ctx,
+                                title="MDF Manager",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[MDF Manager - GitHub](https://github.com/Silvris/MDF-Manager)",                                                                                                                                          True],
+                                    ["💻 Developer", "Silvris",                                                                                                                                          True],
+                                    ["📖 More Info:",       "[MDF Manager - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932648163251191819)",                                                                                                                                           True],
+                                ],
+                                thumbnail="https://cdn.discordapp.com/emojis/994146859327172689.png")
+
+    @commands.command(name="RingingBloom",
+                      description="",
+                      usage="{prfx}RingingBloom",
+                      help="",
+                      aliases=["AudioTool", "BNK", "RB"])
+    async def RingingBloom(self, ctx):
+        desc = "RingingBloom is a helpful tool for audio modding in RE Engine games,\n editing PCK, BNK, wem and wwise files in a streamlined application."
+        await utils.embed_reply(ctx,
+                                title="Ringing Bloom",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[Ringing Bloom - GitHub](https://github.com/Silvris/RingingBloom)",                                                                                                                                          True],
+                                    ["💻 Developer", "Silvris",                                                                                                                                          True],
+                                    ["📖 More Info:",       "[Ringing Bloom - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932648013300654131)",                                                                                                                                           True],
+                                ],
+                                thumbnail="https://cdn.discordapp.com/emojis/994146859327172689.png")
+
+    @commands.command(name="3DSmax--Fbxskel_Tool",
+                      description="",
+                      usage="{prfx}FbxskelTool",
+                      help="",
+                      aliases=["3dsFbx", "3dsFbxskel", "MSFbx", "MSskel"])
+    async def FbxskelTool(self, ctx):
+        desc = "The fbxskel tool is Maxscript for 3dsmax that can import and export fbxskel skeleton files from all RE Engine games."
+        await utils.embed_reply(ctx,
+                                title="Fbxskel Tool",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[Fbxskel Tool - Thread](https://discord.com/channels/718224210270617702/930092288330309683/932649107091247195)",                                                                                                                                          True],
+                                    ["💻 Developer", "alphaZomega",                                                                                                                                          True],
+                                ],
+                                thumbnail="https://cdn.discordapp.com/emojis/994125244212199424.png")
+
+    @commands.command(name="MSG-Tool",
+                      description="",
+                      usage="{prfx}MSGTool",
+                      help="",
+                      aliases=["msg"])
+    async def MSGTool(self, ctx):
+        desc = "The MSG Tool allows you to extract, edit and replace the contents of RE Engine MSG Files."
+        await utils.embed_reply(ctx,
+                                title="MSG Tool",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[MSG Tool - Thread](https://discord.com/channels/718224210270617702/930092288330309683/940772924531552257)",                                                                                                                                          True],
+                                    ["💻 Developer", "ponaromixxx",                                                                                                                                          True],
+                                ],
+                                thumbnail=globals.bot.user.avatar_url)
+
+    @commands.command(name="EMV-Engine",
+                      description="",
+                      usage="{prfx}EMVEngine",
+                      help="",
+                      aliases=["EMV", "console", "REFconsole"])
+    async def EMVEngine(self, ctx):
+        desc = "Alpha's REFramework scripts, which include an interactive Lua Console that can access your global script variables, useful for script development.\n Also includes: Gravity Gun, Console, Enhanced Model Viewer and Enemy Spawner."
+        await utils.embed_reply(ctx,
+                                title="EMV Engine",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[EMV Engine - GitHub]( https://github.com/alphazolam/REFramework-Scripts)",                                                                                                                                          True],
+                                    ["💻 Developer", "alphaZomega",                                                                                                                                          True],
+                                    ["📖 More Info:",       "[EMV Engine - Thread](https://discord.com/channels/718224210270617702/930092288330309683/993612146413928448)",                                                                                                                                           True],
+                                ],
+                                thumbnail="https://cdn.discordapp.com/emojis/994124668690767912.png")
+
 
 def setup(bot):
     bot.add_cog(REtools(bot))
