@@ -391,7 +391,7 @@ class REtools(commands.Cog,
                       help="",
                       aliases=["AudioTool", "BNK", "RB"])
     async def RingingBloom(self, ctx):
-        desc = "RingingBloom is a helpful tool for audio modding in RE Engine games,\n editing PCK, BNK, wem and wwise files in a streamlined application."
+        desc = "RingingBloom is a helpful tool for audio modding in RE Engine games, editing PCK, BNK, wem and wwise files in a streamlined application."
         await utils.embed_reply(ctx,
                                 title="Ringing Bloom",
                                 description=desc,
@@ -445,11 +445,45 @@ class REtools(commands.Cog,
                                 title="EMV Engine",
                                 description=desc,
                                 fields=[
-                                    ["🔗 Link:",          "[EMV Engine - GitHub]( https://github.com/alphazolam/REFramework-Scripts)",                                                                                                                                          True],
+                                    ["🔗 Link:",          "[EMV Engine - GitHub](https://github.com/alphazolam/REFramework-Scripts)",                                                                                                                                          True],
                                     ["💻 Developer", "alphaZomega",                                                                                                                                          True],
                                     ["📖 More Info:",       "[EMV Engine - Thread](https://discord.com/channels/718224210270617702/930092288330309683/993612146413928448)",                                                                                                                                           True],
                                 ],
                                 thumbnail="https://cdn.discordapp.com/emojis/994124668690767912.png")
+
+    @commands.command(name="BlenderPlugin",
+                      description="",
+                      usage="{prfx}BlenderPlugin",
+                      help="",
+                      aliases=["Blender", "Wrapper"])
+    async def BlenderPlugin(self, ctx):
+        desc = "This useful Blender addon utilizes the Noesis MESH plugin to let you to seamlessly import and export RE Engine MESH models directly from Blender."
+        await utils.embed_reply(ctx,
+                                title="Blender Wrapper",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[Blender Wrapper - GitHub](https://github.com/NSACloud/Blender-RE-Mesh-Noesis-Wrapper)",                                                                                                                                          True],
+                                    ["💻 Developer", "NSA Cloud",                                                                                                                                          True],
+                                    ["📖 More Info:",       "[Blender Wrapper - Thread](https://discord.com/channels/718224210270617702/930092288330309683/993614546054938686)",                                                                                                                                           True],
+                                ],
+                                thumbnail="https://cdn.discordapp.com/emojis/994151478065373225.png")
+
+    @commands.command(name="RELit",
+                      description="",
+                      usage="{prfx}RELit",
+                      help="",
+                      aliases=["lights", "REL"])
+    async def RELit(self, ctx):
+        desc = "It allows you to spawn lights in a scene for screenshotting purposes."
+        await utils.embed_reply(ctx,
+                                title="RELit",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[RELit - GitHub]( https://github.com/originalnicodr/RELit)",                                                                                                                                          True],
+                                    ["💻 Developer", "originalnicodr, Otis_inf",                                                                                                                                          True],
+                                    ["📖 More Info:",       "[RELit - Thread](https://discord.com/channels/718224210270617702/930092288330309683/993615154845581323)",                                                                                                                                           True],
+                                ],
+                                thumbnail=globals.bot.user.avatar_url)
 
 
 def setup(bot):
