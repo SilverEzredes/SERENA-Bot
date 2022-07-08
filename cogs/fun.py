@@ -146,7 +146,7 @@ class Fun(commands.Cog,
                                 title="Noises Plugin - REEM Noises CMD",
                                 description=desc,
                                 fields=[
-                                    ["🔗 Link:",          "[Noises Plugin - GitHub](https://www.youtube.com/watch?v=5e2s0DKMGBc)",                                                                                                                                          True],
+                                    ["🔗 Link:",          "[Noises Plugin - GitHub](https://www.youtube.com/watch?v=t0I4mTEdAf8)",                                                                                                                                          True],
                                     ["💻 Developer", "alphaOmega",                                                                                                                                          True],
                                 ],
                                 thumbnail="https://cdn.discordapp.com/emojis/994124668690767912.png")
