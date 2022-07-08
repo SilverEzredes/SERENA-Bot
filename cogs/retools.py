@@ -34,7 +34,7 @@ class REtools(commands.Cog,
                       description="",
                       usage="{prfx}noesisplugin",
                       help="",
-                      aliases=["noesis", "reem", "Plugin", "fmt", "fmtREmesh", "newMS", "noises"])
+                      aliases=["noesis", "reem", "Plugin", "fmt", "fmtREmesh", "newMS"])
     async def noesisplugin(self, ctx):
         desc = "A plugin for Rich Whitehouse's Noesis to import and export\n RE Engine Meshes and Textures."
         await utils.embed_reply(ctx,
