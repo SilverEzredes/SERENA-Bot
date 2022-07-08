@@ -1,3 +1,4 @@
+
 from discord.ext import commands
 from typing import Union
 import discord
@@ -133,6 +134,22 @@ class Fun(commands.Cog,
                                     description=f"<@!{ctx.author.id}> doesn't have any friends yet so they tried consoling themselves with a few pats!\n"
                                                 "Cheer up pal, life gets better!",
                                     thumbnail="https://cdn.discordapp.com/emojis/889190978001465476.gif")
+
+    @commands.command(name="noises_Plugin_REEM",
+                      description="",
+                      usage="{prfx}noisesplugin",
+                      help="",
+                      aliases=["noises"])
+    async def noisesplugin(self, ctx):
+        desc = "A plugin for Rich Whitehouse's Noises to import and export\n RE Engine Meshes and Textures."
+        await utils.embed_reply(ctx,
+                                title="Noises Plugin - REEM Noises CMD",
+                                description=desc,
+                                fields=[
+                                    ["🔗 Link:",          "[Noises Plugin - GitHub](https://www.youtube.com/watch?v=5e2s0DKMGBc)",                                                                                                                                          True],
+                                    ["💻 Developer", "alphaOmega",                                                                                                                                          True],
+                                ],
+                                thumbnail="https://cdn.discordapp.com/emojis/994124668690767912.png")
 
 
 def setup(bot):
