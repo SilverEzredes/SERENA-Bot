@@ -1,5 +1,5 @@
-# D.O.L.O.R.E.S. Bot
-Custom Discord bot for Modding Haven.
+# S.E.R.E.N.A. Bot
+Custom Discord bot for Tomb Raider Modding!
 
 ## Features:
  - Leveling system for:
@@ -17,6 +17,7 @@ Custom Discord bot for Modding Haven.
 
 ## To Do:
  - Moderation Tools
+ - Replace MH stuff with TR stuff.
  - IDK
 
 ## Credits:
