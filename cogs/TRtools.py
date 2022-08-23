@@ -28,4 +28,4 @@ class TRtools(commands.Cog,
                                     ["💻 Developer", "Aaron",                                                                                                                                          True],                               ],
                                 thumbnail="https://cdn.discordapp.com/emojis/994126039246700544.png")
 def setup(bot):
-    bot.add_cog(REtools(bot))
+    bot.add_cog(TRtools(bot))
