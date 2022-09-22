@@ -10,12 +10,12 @@ class TRtools(commands.Cog,
         self.bot = bot
 
     @utils.hybcommand(globals.bot,
-                      name="BlenderFBX",
+                      name="blenderfbx",
                       description="",
-                      usage="{prfx}FBX",
+                      usage="{prfx}blenderfbx",
                       help="",
-                      aliases=["BlenderFBX"])
-    async def BlenderFBX(self, ctx):
+                      aliases=[])
+    async def blenderfbx(self, ctx):
         desc = "Fixes fbx import plugin for blender."
         await utils.embed_reply(ctx,
                                 title="Blender FBX Importer",
