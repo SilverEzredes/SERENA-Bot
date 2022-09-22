@@ -14,7 +14,8 @@ class TRtools(commands.Cog,
                       description="",
                       usage="{prfx}blenderfbx",
                       help="",
-                      aliases=[])
+                      aliases=[],
+                      slash_aliases=False)
     async def blenderfbx(self, ctx):
         desc = "Fixes fbx import plugin for blender."
         await utils.embed_reply(ctx,
