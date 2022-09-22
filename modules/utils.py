@@ -275,7 +275,7 @@ def pretty_size(size, precision=0):
 
 
 # Hybrid group decorator that syncs aliases with slashcommands
-def hybgroup(bot, **kwargs):
+def hybgroup(bot, slash_aliases=True, **kwargs):
     def decorator(func):
         _app_groups = []
         extras = kwargs.pop("extras", {})
@@ -287,7 +287,7 @@ def hybgroup(bot, **kwargs):
             "_group": group
         })
         short_desc = kwargs.get("description", "").split("\n")[0][:99] or discord.utils.MISSING
-        for alias in [kwargs.get("name", discord.utils.MISSING)] + kwargs.get("aliases", []):
+        for alias in [kwargs.get("name", discord.utils.MISSING)] + (kwargs.get("aliases", []) if slash_aliases else []):
             # Rename
             if alias is discord.utils.MISSING:
                 alias = group.name
@@ -298,15 +298,18 @@ def hybgroup(bot, **kwargs):
                 desc = f"Alias for /{group.name}. "
                 if short_desc is not discord.utils.MISSING:
                     desc += ". " + short_desc[:99 - len(desc)]
-            app_group = app_commands.Group(name=alias, description=desc, extras=extras)
-            bot.tree.add_command(app_group)
-            _app_groups.append(app_group)
+            try:
+                app_group = app_commands.Group(name=alias, description=desc, extras=extras)
+                bot.tree.add_command(app_group)
+                _app_groups.append(app_group)
+            except app_commands.errors.CommandLimitReached:
+                globals.log.warning(f"Command limit reached! Failed to add /{alias} for group {globals.BOT_PREFIX.lower()}{group.name}")
         return group
     return decorator
 
 
 # Hybrid command decorator that syncs aliases, checks and cooldowns with slashcommands
-def hybcommand(bot, group=None, check_func=None, check_title=None, check_desc=None, cooldown_rate=None, cooldown_time=None, cooldown_key=None, cooldown_title=None, cooldown_desc=None, **kwargs):
+def hybcommand(bot, group=None, slash_aliases=True, check_func=None, check_title=None, check_desc=None, cooldown_rate=None, cooldown_time=None, cooldown_key=None, cooldown_title=None, cooldown_desc=None, **kwargs):
     def decorator(func):
         _app_commands = []
         extras = kwargs.pop("extras", {})
@@ -362,7 +365,7 @@ def hybcommand(bot, group=None, check_func=None, check_title=None, check_desc=No
             for i in range(len(lines)):
                 lines[i] = lines[i][1:]
         source = "".join(lines)
-        for alias in [kwargs.get("name", discord.utils.MISSING)] + kwargs.get("aliases", []):
+        for alias in [kwargs.get("name", discord.utils.MISSING)] + (kwargs.get("aliases", []) if slash_aliases else []):
             # Parse and manipulate
             ast_tree = ast.parse(source)
             fn = ast_tree.body[0]
@@ -384,20 +387,23 @@ def hybcommand(bot, group=None, check_func=None, check_title=None, check_desc=No
                 desc = f"Alias for /{command.name}"
                 if short_desc is not discord.utils.MISSING:
                     desc += ". " + short_desc[:99 - len(desc)]
-            if group:
-                for app_group in group.extras.get("_app_groups", []):
-                    app_command = app_group.command(name=alias, description=desc, extras=extras)(new_func)
+            try:
+                if group:
+                    for app_group in group.extras.get("_app_groups", []):
+                        app_command = app_group.command(name=alias, description=desc, extras=extras)(new_func)
+                        if cooldown_rate:
+                            app_cooldown(app_command)
+                        if check_func:
+                            app_check(app_command)
+                else:
+                    app_command = bot.tree.command(name=alias, description=desc, extras=extras)(new_func)
                     if cooldown_rate:
                         app_cooldown(app_command)
                     if check_func:
                         app_check(app_command)
-            else:
-                app_command = bot.tree.command(name=alias, description=desc, extras=extras)(new_func)
-                if cooldown_rate:
-                    app_cooldown(app_command)
-                if check_func:
-                    app_check(app_command)
-            _app_commands.append(app_command)
+                _app_commands.append(app_command)
+            except app_commands.errors.CommandLimitReached:
+                globals.log.warning(f"Command limit reached! Failed to add /{alias} for command {globals.BOT_PREFIX.lower()}{command.name}")
         return command
     return decorator
 
