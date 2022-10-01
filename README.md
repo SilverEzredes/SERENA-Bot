@@ -16,8 +16,6 @@ Custom Discord bot for Tomb Raider Modding!
  - Join message
 
 ## To Do:
- - Moderation Tools
- - Replace MH stuff with TR stuff.
  - IDK
 
 ## Credits:

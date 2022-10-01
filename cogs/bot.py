@@ -40,9 +40,9 @@ class Bot(commands.Cog,
                     for command in sorted(cog.get_commands(), key=lambda cmd: cmd.name):
                         desc += f'{prfx}**{command.name}**: ' + (command.description[:command.description.find("\n")] if "\n" in command.description else command.description) + '\n'
                     desc += f"\nYou can use `{prfx}help [ command ]` to see more info about it!\n"
-                    desc += f"**\nD.O.L.O.R.E.S. Bot**, made with ❤️ by [WillyJL](https://linktr.ee/WillyJL)"
+                    desc += f"**\nS.E.R.E.N.A. Bot**, made with ❤️ by [WillyJL](https://linktr.ee/WillyJL)"
                     await utils.embed_reply(ctx,
-                                            title=f"⁉️   D.O.L.O.R.E.S. Help  >  {cog_name}",
+                                            title=f"⁉️   S.E.R.E.N.A. Help  >  {cog_name}",
                                             description=desc)
                     return
             for command in globals.bot.commands:
@@ -60,9 +60,9 @@ class Bot(commands.Cog,
                         desc += command.help + "\n"
                     if aliases:
                         desc += f"\n**Aliases**: `{prfx}" + f"`, `{prfx}".join(aliases) + "`\n"
-                    desc += f"**\nD.O.L.O.R.E.S. Bot**, made with ❤️ by [WillyJL](https://linktr.ee/WillyJL)"
+                    desc += f"**\nS.E.R.E.N.A. Bot**, made with ❤️ by [WillyJL](https://linktr.ee/WillyJL)"
                     await utils.embed_reply(ctx,
-                                            title=f"⁉️   D.O.L.O.R.E.S. Help  >  {cog_name}  >  {prfx}{command.name}",
+                                            title=f"⁉️   S.E.R.E.N.A. Help  >  {cog_name}  >  {prfx}{command.name}",
                                             description=desc)
                     return
         desc = "You can use these commands to see a category of commands:\n\n"
@@ -74,9 +74,9 @@ class Bot(commands.Cog,
             cog = globals.bot.get_cog(cog_name)
             desc += f"{prfx}help **{cog_name.lower()}**: " + (cog.description[:cog.description.find('\n')] if '\n' in cog.description else cog.description) + "\n"
         desc += f"\nYou can use `{prfx}help [ command ]` to see more info about it!\n"
-        desc += f"\n**D.O.L.O.R.E.S. Bot**, made with ❤️ by [WillyJL](https://linktr.ee/WillyJL)"
+        desc += f"\n**S.E.R.E.N.A. Bot**, made with ❤️ by [WillyJL](https://linktr.ee/WillyJL)"
         await utils.embed_reply(ctx,
-                                title="⁉️   D.O.L.O.R.E.S. Help",
+                                title="⁉️   S.E.R.E.N.A. Help",
                                 description=desc)
         return
 
