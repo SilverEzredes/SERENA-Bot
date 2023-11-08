@@ -218,7 +218,7 @@ async def main():
                                                         description=f"Welcome {user.mention} to Tomb Raider Modding!\n"
                                                                     "\n" +
                                                                     (f"Make sure you have read through <#{globals.JOIN_LOG_CHANNEL_IDS[str(user.guild.id)]['rules_channel_id']}>!\n" if globals.JOIN_LOG_CHANNEL_IDS[str(user.guild.id)]["rules_channel_id"] else "") +
-                                                                    (f"You can pick your role color in <#{globals.JOIN_LOG_CHANNEL_IDS[str(user.guild.id)]['selfrole_channel_id']}>\n" if globals.JOIN_LOG_CHANNEL_IDS[str(user.guild.id)]["selfrole_channel_id"] else "") +
+                                                                    "You can pick your role color in the Channels & Roles tab.\n" +
                                                                     "\n" +
                                                                     "Enjoy your stay!",
                                                         thumbnail=user.display_avatar.url))
