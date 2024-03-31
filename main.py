@@ -32,7 +32,7 @@ if os.path.exists("config.json"):
                 config[key] = str(value)
         os.environ.update(config)
         globals.log.info("Loaded custom config")
-globals.seen_releases = set()
+globals.seen_releases = dict()
 
 # Local imports
 from modules import db, utils, xp
@@ -264,12 +264,13 @@ async def main():
             else:  # Didn't break, so message is not deleted, try checking duplicate posts
                 if message.embeds:
                     only_dupes = True
+                    now = datetime.datetime.now()
                     for embed in message.embeds:
                         if not embed.url or not embed.url.startswith("https://www.nexusmods.com"):
                             only_dupes = False
                             continue
-                        if embed.url not in globals.seen_releases:
-                            globals.seen_releases.add(embed.url)
+                        if embed.url not in globals.seen_releases or (now - globals.seen_releases[embed.url]) > datetime.timedelta(hours=12):
+                            globals.seen_releases[embed.url] = now
                             only_dupes = False
                             continue
                     if only_dupes:
@@ -280,7 +281,7 @@ async def main():
                             await notif_chan.send(embed=utils.custom_embed(message.guild,
                                                                            title="💢 Begone, dupe!",
                                                                            description=f"A duplicate mod release post was just **removed** from {message.channel.mention}\n"
-                                                                                       f"**Mod name{'' if len(message.embeds) == 1 else 's'}**: `{'`, `'.join(embed.title for embed in message.embeds)}`"))
+                                                                                       f"**Mod name{'' if len(message.embeds) == 1 else 's'}**: `{'`, `'.join(f'{embed.title} ({datetime.timedelta(seconds=round((now - globals.seen_releases[embed.url]).total_seconds()))})' for embed in message.embeds)}`"))
         if message.channel.id in (globals.REQUESTS_CHANNEL_IDS.get(str(message.guild.id)) or []):
             if message.content and utils.is_requests_command(lowered_content):
                 await globals.bot.process_commands(message)
